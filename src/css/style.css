@@ -1,0 +1,88 @@
+/*NAVBAR*/
+
+.navbarcolor{
+    background-color: #303536;
+}
+
+.navtext a,p{
+    color: #ffffff;
+}
+
+.navtext a:hover{
+    color: #007DFC;
+}
+
+.lead-active{
+    font-weight: 500;
+}
+
+.custom-toggler.navbar-toggler { 
+    border: 2px solid  #ffffff;
+  } 
+
+
+.footer-custom{
+  width: 100%;
+}
+
+/*MEDIA QUERIES*/
+
+/*X-SMALL DEVICES PUBLICIDAD*/
+@media all and (max-width:576px){
+    .logohead{
+        width: 50px;
+        margin-left: 10px;
+      }
+
+      .header-margin{
+        margin-bottom: 82.88px;
+      }
+    }
+  
+  /*SMALL DEVICES*/
+  @media all and (min-width:576px) and (max-width:768px){
+    .logohead{
+        width: 70px;
+        margin-left: 10px;
+      }
+
+      .header-margin{
+        margin-bottom: 105.63px;
+      }
+    }
+  
+  /*MEDIUM DEVICES*/
+  @media all and (min-width: 768px) and (max-width:991px){
+    .logohead{
+        width: 70px;
+        margin-left: 10px;
+      }
+
+      .header-margin{
+        margin-bottom: 105.63px;
+      }
+    }
+  
+  /*LARGE DEVICES*/
+    @media all and (min-width: 991px) and (max-width:1200px){
+        .logohead{
+            width: 70px;
+            margin-left: 10px;
+          }
+
+        .header-margin{
+            margin-bottom: 105.63px;
+          }
+    }
+  
+  /*XTRA LARGE DEVICES*/
+    @media all and (min-width: 1200px){
+        .logohead{
+            width: 70px;
+            margin-left: 10px;
+          }
+
+        .header-margin{
+            margin-bottom: 105.63px;
+          }
+    } 
