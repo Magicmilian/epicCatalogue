@@ -6,6 +6,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/js/index.js',
+    admin: './src/js/admin.js',
+    registro: './src/js/registro.js',
+    contacto: './src/js/contacto.js',
   },
   output: {
     filename: 'js/[name].js',
@@ -48,6 +51,60 @@ module.exports = {
       },
       inject: true,
       chunks: ["index"],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/admin.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+      inject: true,
+      chunks: ["admin"],
+      filename: "./admin.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/acerca_de.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+      filename: "./acerca_de.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/contacto.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+      inject: true,
+      chunks: ["contacto"],
+      filename: "./contacto.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/registro.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+      inject: true,
+      chunks: ["registro"],
+      filename: "./registro.html"
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.css'

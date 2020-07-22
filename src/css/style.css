@@ -1,5 +1,9 @@
 /*NAVBAR*/
 
+body{
+  font-family: 'Red Rose', cursive;;
+}
+
 .navbarcolor{
     background-color: #303536;
 }
