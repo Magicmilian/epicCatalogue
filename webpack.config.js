@@ -9,6 +9,7 @@ module.exports = {
     admin: './src/js/admin.js',
     registro: './src/js/registro.js',
     contacto: './src/js/contacto.js',
+    general: './src/js/general.js',
   },
   output: {
     filename: 'js/[name].js',
@@ -76,6 +77,8 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
         useShortDoctype: true
       },
+      inject: true,
+      chunks: ["general"],
       filename: "./acerca_de.html"
     }),
     new HtmlWebpackPlugin({
