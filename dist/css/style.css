@@ -35,6 +35,11 @@ body{
   width: 100%;
 }
 
+/* FONDO DE PANTALLA */
+.fondoPantalla{
+  background-color: #292929;
+}
+
 /*MEDIA QUERIES*/
 
 /*X-SMALL DEVICES PUBLICIDAD*/
