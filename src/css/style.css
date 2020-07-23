@@ -1,5 +1,4 @@
-/*NAVBAR*/
-
+/*NAVBAR Y GENERALES*/
 body{
   font-family: 'Red Rose', cursive;;
 }
@@ -36,10 +35,13 @@ body{
 
 /*CONFIGURACION ADMINISTRACION*/
 /*CONFIGURACION TABLA*/
+.min-vh-55 {
+  min-height: 55vh !important;
+}
+
 .tableCustom{
   color: white;
   font-size: 18px;
-
 }
 
 th{
@@ -149,6 +151,11 @@ tr:nth-child(even) {
 }
 
 /*CONFIGURACION DE OPCIONES*/
+.btnSizeCustom{
+  width: 36.25px ;
+  height: 33px;
+}
+
 .opciones{
   min-width: 150px;
 }
