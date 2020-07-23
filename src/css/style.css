@@ -17,7 +17,7 @@ body{
 }
 
 .lead-active{
-    font-weight: 500;
+  text-decoration: underline;
 }
 
 .custom-toggler.navbar-toggler { 
