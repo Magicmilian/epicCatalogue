@@ -10,6 +10,7 @@ module.exports = {
     registro: './src/js/registro.js',
     contacto: './src/js/contacto.js',
     general: './src/js/general.js',
+    login: './src/js/login.js',
   },
   output: {
     filename: 'js/[name].js',
@@ -108,6 +109,20 @@ module.exports = {
       inject: true,
       chunks: ["registro"],
       filename: "./registro.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/login.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+      inject: true,
+      chunks: ["login"],
+      filename: "./login.html"
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.css'
