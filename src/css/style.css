@@ -29,6 +29,33 @@ body{
   width: 100%;
 }
 
+.py-login{
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.fondoLogin1{
+  position: absolute;
+  background-color: #007DFC;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+.fondoLogin2{
+  position: absolute;
+  background-color: #007DFC;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+
+.imgLogin{
+  position: relative;
+  z-index: 1;
+}
+
 /* FONDO DE PANTALLA */
 .fondoPantalla{
   background-color: #292929;
