@@ -44,10 +44,32 @@ body{
 
 .fondoLogin2{
   position: absolute;
-  background-color: #007DFC;
+  width: 0;
+  height: 0;
+  border-right: 422px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #007DFC;
+  border-bottom: 100px solid #007DFC;
+  bottom: 29%;
+}
+
+.fondoLogin1-invalid{
+  position: absolute;
+  background-color: #ED3C3C;
   width: 85%;
   height: 150px;
   bottom: 0px;
+}
+
+.fondoLogin2-invalid{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 422px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #ED3C3C;
+  border-bottom: 100px solid #ED3C3C;
+  bottom: 29%;
 }
 
 

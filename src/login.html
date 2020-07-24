@@ -46,24 +46,26 @@
             <article class="col-6">
                 <!-- Imagen -->
                 <img src="img/login.png" alt="Hombre con arma." class="w-100 imgLogin">
-                <div class="fondoLogin1 fondoLogin2"></div>
+                <div class="fondoLogin1-invalid"></div>
+                <div class="fondoLogin2-invalid"></div>
             </article>
             <article class="col-6">
                 <p class="display-3">Inicia Sesion</p>
                 <!-- Cuadro de Inicio de Sesion -->
                 <form>
-                    <!-- correo electronico -->
+                    <!-- Usuario -->
                     <div class="form-group mt-2">
-                        <label for="exampleInputEmail1" class="text-light">Correo electronico</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                            placeholder="Correo electronico">
-                        <small id="emailHelp" class="form-text text-muted"></small>
+                        <label for="exampleInputEmail1" class="text-light">Usuario</label>
+                        <input type="email" class="form-control is-invalid" id="user" aria-describedby="emailHelp"
+                            placeholder="usuario">
+                        <div class="invalid-feedback">Ingrese un usuario valido.</div>
                     </div>
                     <!-- contraseña -->
                     <div class="form-group">
                         <label for="exampleInputPassword1" class="text-light">Contraseña</label>
-                        <input type="password" class="form-control" id="password"
-                            placeholder="***********">
+                        <input type="password" class="form-control is-invalid" id="password" placeholder="***********">
+                        <div class="invalid-feedback">Contraseña Incorrecta.</div>
+
                     </div>
                     <!-- boton iniciar -->
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
