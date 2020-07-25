@@ -19,7 +19,7 @@ window.requiereApellido = function (input) {
         return true;
     } else {
         input.className = " form-control is-invalid"
-        return fasle;
+        return false;
     }
 }
 
@@ -78,6 +78,12 @@ window.formularioRegistro = function (e) {
     ) {
         console.log("desde la funcion validar general");
     }else{
-        alert("Oh oh ocurrio algo");
+        requiereNombre(document.getElementById('nombreRegistro'));
+        requiereApellido(document.getElementById('apellidoRegistro'));
+        requiereMail(document.getElementById('mailRegistro'));
+        requierePass(document.getElementById('passRegistro'));
+        requiereNumero(document.getElementById('telefonoRegistro'));
+        requiereCondiciones(document.getElementById('checkboxRegistro'));
+        alert("Debes completar todos los campos requeridos antes de poder registrarte!");
     }
 }
