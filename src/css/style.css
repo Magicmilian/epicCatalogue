@@ -1,6 +1,10 @@
 /*NAVBAR Y GENERALES*/
 body{
-  font-family: 'Red Rose', cursive;;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+#destacado{
+  background-color: #131313;
 }
 
 .navbarcolor{
@@ -52,9 +56,27 @@ tr:nth-child(even) {
   background-color: #303536;
 }
 
+.sorter{
+  cursor: pointer;
+}
+
 /*OVERFLOW CAMPO DESCRIPCION*/
-.descripcion{
+.tablaDescripcion{
   max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tablaNombre{
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tablaCategoria{
+  max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
