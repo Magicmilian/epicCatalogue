@@ -44,7 +44,7 @@
     <!-- Empieza cuerpo de pagina registro -->
     <main class="fondoPantalla">
         <div class=" col-lg-4 shadow-none py-5 mx-auto fondoPantalla rounded">
-            <form>
+            <form onsubmit="formularioRegistro(event)" id="formRegistro">
                 <div class="row">
                 <!-- nombre -->
                     <div class="col-6">
@@ -77,15 +77,15 @@
                     <div class="invalid-feedback">La contraseña debe tener almenos 8 digitos</div>
                 </div>
                 <!-- contraseña de nuevo -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="rePassRegistro" class="text-light">Repita contraseña</label>
                     <input type="password" class="form-control" id="rePassRegistro" placeholder="***********" onblur="requiereRePass(this)">
                     <div class="valid-feedback"></div>
                     <div class="invalid-feedback">La contraseña no coincide</div>
-                </div>
+                </div> -->
                 <!-- telenofo -->
                 <div class="form-group">
-                    <label class="text-light">Telefono</label>
+                    <label class="text-light">Telefonaaso</label>
                     <input class="form-control" type="text" placeholder="0 + (cod de area) sin 15" id="telefonoRegistro" onblur="requiereNumero(this)">
                     <div class="valid-feedback"></div>
                     <div class="invalid-feedback">Debes agregar un numero de telefono valido</div>
@@ -99,7 +99,7 @@
                     <div class="invalid-feedback">Debes aceptar los terminos y condiciones</div>
                 </div>
                 <!-- boton enviar -->
-                <button type="submit" class="btn btn-primary" onblur="requiereRevisar(this)">Registrate</button>
+                <button type="submit" class="btn btn-primary" id="requiereRevisar">Registrate</button>
             </form>
             <!-- botones de redes sociales para registrarse -->
             <div class="mt-5 text-center">

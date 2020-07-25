@@ -35,19 +35,11 @@ window.requiereMail = function (input) {
     }
 }
 
+
 window.requierePass = function (input) {
     if (input.value.length >= 8) {
         input.className = "form-control is-valid"
-        return true;
-    } else {
-        input.className = "form-control is-invalid"
-        return false;
-    }
-}
 
-window.requiereRePass = function (input) {
-    if (input.value == requierePass(document.getElementById('passRegistro')).value) {
-        input.className = "form-control is-valid"
         return true;
     } else {
         input.className = "form-control is-invalid"
@@ -65,12 +57,27 @@ window.requiereNumero = function (input) {
     }
 }
 
-window.requiereCondiciones = function (input){
-    if(input.checked){
+window.requiereCondiciones = function (input) {
+    if (input.checked) {
         input.className = "form-check-input is-valid";
         return true;
-    }else{
+    } else {
         input.className = "form-check-input is-invalid";
         return false;
+    }
+}
+
+window.formularioRegistro = function (e) {
+    e.preventDefault();
+    if (requiereNombre(document.getElementById('nombreRegistro')) &&
+        requiereApellido(document.getElementById('apellidoRegistro'))&&
+        requiereMail(document.getElementById('mailRegistro'))&&
+        requierePass(document.getElementById('passRegistro'))&&
+        requiereNumero(document.getElementById('telefonoRegistro'))&&
+        requiereCondiciones(document.getElementById('checkboxRegistro'))
+    ) {
+        console.log("desde la funcion validar general");
+    }else{
+        alert("Oh oh ocurrio algo");
     }
 }
