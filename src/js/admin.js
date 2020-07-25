@@ -177,7 +177,9 @@ window.limpiarForm = function () {
     let nombre = document.getElementById("nombre");
     let categoria = document.getElementById("categoria");
     let descripcion = document.getElementById("descripcion");
-    let imagen = document.getElementById("imagen");
+    let imagen1 = document.getElementById("imagen1");
+    let imagen2 = document.getElementById("imagen2");
+    let imagen3 = document.getElementById("imagen3");
     let iframeurl = document.getElementById("iframeurl");
     let formProducto = document.getElementById("formProducto");
     document.getElementById("codigo").removeAttribute("disabled");
@@ -186,7 +188,9 @@ window.limpiarForm = function () {
     nombre.className = "form-control";
     categoria.className = "form-control";
     descripcion.className = "form-control";
-    imagen.className = "form-control";
+    imagen1.className = "form-control";
+    imagen2.className = "form-control";
+    imagen3.className = "form-control";
     iframeurl.className = "form-control";
     productoExistente = false;
 }
@@ -208,13 +212,15 @@ function agregarProducto() {
     let nombre = document.getElementById("nombre");
     let categoria = document.getElementById("categoria");
     let descripcion = document.getElementById("descripcion");
-    let imagen = document.getElementById("imagen");
+    let imagen1 = document.getElementById("imagen1");
+    let imagen2 = document.getElementById("imagen2");
+    let imagen3 = document.getElementById("imagen3");
     let iframeurl = document.getElementById("iframeurl");
 
     //Valido el formulario de manera general
-    if (validarCodigo(codigo) && campoRequerido(nombre) && campoRequerido(categoria) && campoRequerido(descripcion) && campoRequerido(imagen) && validarUrl(iframeurl)) {
+    if (validarCodigo(codigo) && campoRequerido(nombre) && campoRequerido(categoria) && campoRequerido(descripcion) && campoRequerido(imagen1) && campoRequerido(imagen2) && campoRequerido(imagen3) && validarUrl(iframeurl)) {
         //Creamos un objeto nuevo con los valores que trajimos de los inputs del formulario
-        let producto = new Producto(codigo.value, nombre.value, categoria.value, descripcion.value, imagen.value, iframeurl.value,);
+        let producto = new Producto(codigo.value, nombre.value, categoria.value, descripcion.value, imagen1.value, imagen2.value, imagen3.value, iframeurl.value);
         listaProductos.push(producto);
         localStorage.setItem("productoKey", JSON.stringify(listaProductos));
         leerDatos();
@@ -226,7 +232,9 @@ function agregarProducto() {
         campoRequerido(nombre);
         campoRequerido(categoria);
         campoRequerido(descripcion);
-        campoRequerido(imagen);
+        campoRequerido(imagen1);
+        campoRequerido(imagen2);
+        campoRequerido(imagen3);
         validarUrl(iframeurl);
         document.getElementById("validacionGeneral").className = "is-invalid";
     }
@@ -244,7 +252,9 @@ window.abrirModificarProducto = function (codigo) {
     document.getElementById("nombre").value = objetoEncontrado.nombre;
     document.getElementById("categoria").value = objetoEncontrado.categoria;
     document.getElementById("descripcion").value = objetoEncontrado.descripcion;
-    document.getElementById("imagen").value = objetoEncontrado.imagen;
+    document.getElementById("imagen1").value = objetoEncontrado.imagen1;
+    document.getElementById("imagen2").value = objetoEncontrado.imagen2;
+    document.getElementById("imagen3").value = objetoEncontrado.imagen3;
     document.getElementById("iframeurl").value = objetoEncontrado.iframeurl;
     //Mostrar la ventana modal
     let ventanaModal = document.getElementById("modalProducto");
@@ -259,31 +269,37 @@ window.guardarProductoModificado = function () {
     let nombre = document.getElementById("nombre");
     let categoria = document.getElementById("categoria");
     let descripcion = document.getElementById("descripcion");
-    let imagen = document.getElementById("imagen");
+    let imagen1 = document.getElementById("imagen1");
+    let imagen2 = document.getElementById("imagen2");
+    let imagen3 = document.getElementById("imagen3");
     let iframeurl = document.getElementById("iframeurl");
     //Valido el formulario de manera general
-    if (campoRequerido(nombre) && campoRequerido(categoria) && campoRequerido(descripcion) && campoRequerido(imagen) && validarUrl(iframeurl)) {
+    if (campoRequerido(nombre) && campoRequerido(categoria) && campoRequerido(descripcion) && campoRequerido(imagen1) && campoRequerido(imagen2) && campoRequerido(imagen3) && validarUrl(iframeurl)) {
         //Buscar el producto que estaba modificando en el arreglo y actualizar los valores
         for (let i in listaProductos) {
             if (listaProductos[i].codigo == codigo.value) {
                 listaProductos[i].nombre = nombre.value;
                 listaProductos[i].categoria = categoria.value;
                 listaProductos[i].descripcion = descripcion.value;
-                listaProductos[i].imagen = imagen.value;
+                listaProductos[i].imagen1 = imagen1.value;
+                listaProductos[i].imagen2 = imagen2.value;
+                listaProductos[i].imagen3 = imagen3.value;
                 listaProductos[i].iframeurl = iframeurl.value;
             }
-            //Actualizar local Storage y dibujamos la tabla
-            localStorage.setItem("productoKey", JSON.stringify(listaProductos));
-            leerDatos();
-            limpiarForm();
-            let ventanaModal = document.getElementById("modalProducto");
-            $(ventanaModal).modal("hide");
-        }
+        }         
+        //Actualizar local Storage y dibujamos la tabla
+        localStorage.setItem("productoKey", JSON.stringify(listaProductos));
+        leerDatos();
+        limpiarForm();
+        let ventanaModal = document.getElementById("modalProducto");
+        $(ventanaModal).modal("hide");
     } else {
         campoRequerido(nombre);
         campoRequerido(categoria);
         campoRequerido(descripcion);
-        campoRequerido(imagen);
+        campoRequerido(imagen1);
+        campoRequerido(imagen2);
+        campoRequerido(imagen3);
         validarUrl(iframeurl);
         document.getElementById("validacionGeneral").className = "is-invalid";
     }
@@ -300,7 +316,7 @@ window.eliminarProducto = function (codigo) {
 }
 
 //FUNCIONALIDAD PARA SORTEAR LA TABLA
-window.sortTable = function(n) {
+window.sortTable = function (n) {
     let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("tablaProdAll");
     switching = true;
@@ -309,51 +325,51 @@ window.sortTable = function(n) {
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
-      // Start by saying: no switching is done:
-      switching = false;
-      rows = table.rows;
-      /* Loop through all table rows (except the
-      first, which contains table headers): */
-      for (i = 1; i < (rows.length - 1); i++) {
-        // Start by saying there should be no switching:
-        shouldSwitch = false;
-        /* Get the two elements you want to compare,
-        one from current row and one from the next: */
-        x = rows[i].getElementsByTagName("TD")[n];
-        y = rows[i + 1].getElementsByTagName("TD")[n];
-        /* Check if the two rows should switch place,
-        based on the direction, asc or desc: */
-        if (dir == "asc") {
-          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-            // If so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
-        } else if (dir == "desc") {
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            // If so, mark as a switch and break the loop:
-            shouldSwitch = true;
-            break;
-          }
+        // Start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /* Loop through all table rows (except the
+        first, which contains table headers): */
+        for (i = 1; i < (rows.length - 1); i++) {
+            // Start by saying there should be no switching:
+            shouldSwitch = false;
+            /* Get the two elements you want to compare,
+            one from current row and one from the next: */
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /* Check if the two rows should switch place,
+            based on the direction, asc or desc: */
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    // If so, mark as a switch and break the loop:
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    // If so, mark as a switch and break the loop:
+                    shouldSwitch = true;
+                    break;
+                }
+            }
         }
-      }
-      if (shouldSwitch) {
-        /* If a switch has been marked, make the switch
-        and mark that a switch has been done: */
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-        // Each time a switch is done, increase this count by 1:
-        switchcount ++;
-      } else {
-        /* If no switching has been done AND the direction is "asc",
-        set the direction to "desc" and run the while loop again. */
-        if (switchcount == 0 && dir == "asc") {
-          dir = "desc";
-          switching = true;
+        if (shouldSwitch) {
+            /* If a switch has been marked, make the switch
+            and mark that a switch has been done: */
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            // Each time a switch is done, increase this count by 1:
+            switchcount++;
+        } else {
+            /* If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again. */
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
         }
-      }
     }
-  }
+}
 
 //VALIDACION DE FORMULARIO
 window.validarCodigo = function (codigo) {
