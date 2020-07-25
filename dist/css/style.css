@@ -78,7 +78,6 @@ body{
   bottom: 29%;
 }
 
-
 .imgLogin{
   position: relative;
   z-index: 1;
@@ -137,6 +136,7 @@ body{
         .header-margin{
             margin-bottom: 105.63px;
           }
+
     }
   
   /*XTRA LARGE DEVICES*/
