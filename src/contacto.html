@@ -44,27 +44,51 @@
         <h3 class="display-3 text-center text-primary">Contactanos</h3>
         <hr>
         <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-6" id="formColor">
+
+            <div class="col-sm-12 col-md-6">
                 <h3>Si tienes alguna pregunta, o quieres ponerte en contacto con nosotros, no dudes en escribirnos!</h3>
                 <div class="my-3">
-                    <img src="imgJuan/gray-badge-and-knight.png" id="imagenJmd" alt="">
+                    <img src="img/Epic_Catalogue_logo.png" id="imagenJmd" alt="">
                 </div>
-                <form class=" p-4">
+
+                <form onsubmit="validarGeneral(event)" class=" p-4">
                     <div class="form-group">
                         <label>Nombre y apellido</label>
-                        <input type="text" placeholder="carlos diaz" class="form-control">
+                        <input type="text" placeholder="carlos diaz" onblur="requerido(this)" id="nombre"
+                            class="form-control">
+                        <div class="valid-feedback">
+                            Todo en orden!
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingrese un nombre valido.
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" placeholder="rollingamer.com" class="form-control">
+                        <input type="text" placeholder="rollingamer@gmail.com" id="email" onblur="revisarEmail(this)"
+                            class="form-control">
+                    </div>
+                    <div class="valid-feedback">
+                        bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese un email valido.
                     </div>
                     <div class="form-group">
                         <label>Consulta</label>
-                        <textarea rows="4" placeholder="Agregue su consulta aqui" class="form-control"></textarea>
+                        <textarea rows="4" placeholder="Agregue su consulta aqui" id="consulta" class="form-control"
+                            onblur="revisarConsulta(this)"></textarea>
+                        <div class="valid-feedback">
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingrese una consulta valida. Debe contener, al menos, 10 caracteres.
+                        </div>
                     </div>
-                    <button class="btn btn-primary" type="submit">Enviar</button>
+                    <button class="btn btn-primary" id="btnEnviar" type="submit">Enviar</button>
                 </form>
+                <div class="alert alert-primary my-3 d-none" id="msjEnvio" role="alert">
+                </div>
             </div>
         </div>
     </section>
