@@ -1,8 +1,19 @@
 /*NAVBAR Y GENERALES*/
 body{
-  font-family: 'Red Rose', cursive;;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  background-color: #292929;
 }
-
+#destacado{
+  background-color: #131313;
+}
+#categoria{
+  background-color: #131313;
+}
+.card{
+  background-color:#131313;
+  border-radius: 0%;
+  border-style: none;
+}
 .navbarcolor{
     background-color: #303536;
 }
