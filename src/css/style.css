@@ -3,8 +3,16 @@ body{
   font-family: 'Alegreya Sans SC', sans-serif;
   background-color: #292929;
 }
-#destacado{
+/* #destacado{
   background-color: #131313;
+} */
+#destacado{
+  background-color: #0886ea;
+background-image: linear-gradient(180deg, #0886ea 27%, #2AF598 100%);
+}
+#promo{
+  background-color: #085eea;
+background-image: linear-gradient(90deg, #085eea 36%, #2AF598 100%);
 }
 #categoria{
   background-color: #131313;
@@ -13,6 +21,16 @@ body{
   background-color:#131313;
   border-radius: 0%;
   border-style: none;
+}
+.buscador{
+  border-style: none;
+}
+/* no esta andando 
+.buscador:hover{
+  background-color: #131313;
+} */
+.titulo{
+  background-color: #131313;
 }
 .navbarcolor{
     background-color: #303536;
