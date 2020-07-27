@@ -43,79 +43,114 @@
     </header>
     <!-- Empieza Acerca de -->
     <main class="fondoPantalla">
-        <section class="container">
-            <div class="text-center">
-                <img src="img/Epic_Catalogue_logo.png" alt="logo de la pagina" width="200px">
-                <div class="text-ligth">
-                    <h1>Epic Catalogue</h1>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/fondo-bind-acercade.jpg" class="d-block w-100" alt="fondo" height="400px">
+                    <div class="carousel-caption">
+                        <img src="img/Epic_Catalogue_logo.png" alt="logo de la pagina" width="200px">
+                        <h1 class="text-light">Epic Catalogue</h1>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <section class="container mt-5">
+            <div class="text-center">
                 <div>
-                    <p>
+                    <p class="text-light lead">
                         EPIC CATEGORIE, es una web creada por un grupo de 5 integrantes de Rolling Code en tiempos de
                         cuartena. El cual nuestro interes es el poder llegar con nuestros juegos atraer a miles de
                         jugadores y llegar a ser una gran comunidad en este basto mundo de diversos generos de juegos
                         tantos para consolas como para PC.
                     </p>
                 </div>
-                <div class="text-ligth">
-                    <!-- delfi -->
-                    <div class="media">
-                        <img src="img/Epic_Catalogue_logo.png" width="100px" class="align-self-end mr-3" alt="...">
-                        <div class="media-body">
-                            <h5 class="mt-0">Bottom-aligned media</h5>
-                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
-                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </p>
-                        </div>
+
+            </div>
+            <div class="accordion" id="sliderEntradaIntegrantes">
+                <div class="card border-dark">
+                    <div class="card-header" id="entradaIntegrantes">
+                            <button class="btn btn-block" type="button" data-toggle="collapse"
+                                data-target="#collapseEntradaIntegrantes" aria-expanded="false"
+                                aria-controls="collapseEntradaIntegrantes">
+                                CONOCÉ A LOS FUNDADORES
+                            </button>
                     </div>
-                    <!-- Juan -->
-                    <div class="media">
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1">Media object</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
-                            ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </div>
-                        <img src="img/Epic_Catalogue_logo.png" width="100px" class="ml-3" alt="...">
-                    </div>
-                    <!-- Luciano -->
-                    <div class="media">
-                        <img src="img/Epic_Catalogue_logo.png" width="100px" class="align-self-end mr-3" alt="...">
-                        <div class="media-body">
-                            <h5 class="mt-0">Bottom-aligned media</h5>
-                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
-                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- maxi -->
-                    <div class="media">
-                        <div class="media-body">
-                            <h5 class="mt-0 mb-1">Media object</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
-                            ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </div>
-                        <img src="img/Epic_Catalogue_logo.png" width="100px" class="ml-3" alt="...">
-                    </div>
-                    <!-- Juan -->
-                    <div class="media">
-                        <img src="img/Epic_Catalogue_logo.png" width="100px" class="align-self-end mr-3" alt="...">
-                        <div class="media-body">
-                            <h5 class="mt-0">Bottom-aligned media</h5>
-                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
-                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </p>
+                    <div id="collapseEntradaIntegrantes" class="collapse show" aria-labelledby="entradaIntegrantes"
+                        data-parent="#sliderEntradaIntegrantes">
+                        <div class="card-body fondoPantalla">
+                            <!-- delfi -->
+                            <div class="media my-4">
+                                <img src="img/Epic_Catalogue_logo.png" width="100px" class="mr-3" alt="Delfina">
+                                <div class="media-body text-light">
+                                    <h4 class="mt-0 mb-1 text-center">Delfina</h4>
+                                    <p class="lead">
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                        ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce
+                                        condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
+                                        faucibus.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Juan -->
+                            <div class="media my-4">
+                                <div class="media-body text-light">
+                                    <h4 class="mt-0 mb-1 text-center">Juan</h4>
+                                    <p class="lead">
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin.
+                                        Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+                                        condimentum nunc
+                                        ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    </p>
+                                </div>
+                                <img src="img/Epic_Catalogue_logo.png" width="100px" class="ml-3" alt="...">
+                            </div>
+                            <!-- Luciano -->
+                            <div class="media my-4">
+                                <img src="img/luciano.jpg" width="100px" class="mr-3 rounded-10" alt="Luciano">
+                                <div class="media-body text-light">
+                                    <h4 class="mt-0 mb-1 text-center">Luciano Gramajo</h4>
+                                    <p class="lead"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit sunt
+                                        natus aut laborum atque est repellat velit ad veniam quam esse optio explicabo
+                                        consectetur tempore, suscipit, laboriosam qui error culpa! Lorem ipsum dolor sit
+                                        amet, consectetur adipisicing elit. Dolor, exercitationem!
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- maxi -->
+                            <div class="media my-4">
+                                <div class="media-body text-light">
+                                    <h4 class="mt-0 mb-1 text-center">Maximiliano Diaz</h4>
+                                    <p class="lead">
+                                        Licenciado en Administracion, estudiante Full Stack en Rolling Code School.
+                                        Gusta de pasar sus días navegando en la web leyendo sobre distintos temas, como
+                                        ser tecnología, programación, y bizarreadas, muchas bizarreadas. Coleccionista
+                                        de memes y gamer en el tiempo libre. Nacido con una habilidad innata para
+                                        procastinar.
+                                    </p>
+                                </div>
+                                <img src="img/maxi.jpg" width="100px" class="ml-3 rounded-20" alt="Maximiliano Diaz">
+                            </div>
+                            <!-- Juan -->
+                            <div class="media my-4">
+                                <img src="img/Epic_Catalogue_logo.png" width="100px" class="mr-3" alt="...">
+                                <div class="media-body text-light">
+                                    <h4 class="mt-0 mb-1 text-center">Juan</h4>
+                                    <p class="lead">Cras sit amet nibh libero, in gravida nulla.
+                                        Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                                        vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                                        fringilla. Donec lacinia congue felis in faucibus.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <!-- Empieza footer -->
     <footer class="navbarcolor navtext text-center py-4">
         <div class="col-8 py-1 mb-1 mt-1 text-center mx-auto">
