@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rolling Games - Administracion</title>
+    <title>Detalles</title>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap" rel="stylesheet">
 </head>
 
@@ -43,32 +43,58 @@
     </header>
 
     <main class="fondoPantalla">
+        <hr>
         <!--Boton volver atras-->
-        <div class="text-light ml-2 ">
+        <div class="text-light ml-2 my-3 ">
             <a class="volverAtras" href="index.html"> <i class="fas fa-chevron-circle-left btnVolverAtras p-0"></i>
                 <p class="d-inline ml-2 btnVolverAtras mb-0 p-0"> Regresar</p>
             </a>
         </div>
-
-        <div class="container">
+        <!--Slider juego detalles-->
+        <div class="container-fluid mx-auto p-0 sliderDetalle">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img src="..." class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div>
+                <div class="carousel-inner sliderDetalle">
+                    <div class="carousel-item active sliderImg">
+                        <img src="img/blue-1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item sliderImg">
+                        <img src="img/blue-2.PNG" class="d-block w-100" alt="...">
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
+        <section class="container">
+            <div class="row">
+                <!--iframe-Juego Detalles-->
+                <div class="col-12 col-lg-8 mt-4 p-4 text-center iframeDisplay">
+                    <iframe class="" width="100%" height="" src="https://www.youtube.com/embed/pOAWBCXpo6k"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-12 col-lg-4 p-4 mt-4">
+                    <!--Detalles-->
+                    <h1 class="text-light">Beyond Blue</h1>
+                    <h3 class="text-light">Aventura</h3>
+                    <p>Beyond Blue es una aventura narrativa para un jugador que te lleva a las profundidades del
+                        corazón azul que late en nuestro planeta. Ambientado en un futuro cercano, Beyond Blue explora
+                        los misterios del océano a través de los ojos de Mirai, una científica y exploradora de las
+                        profundidades marinas. Únete a un flamante equipo de investigación y utiliza la más avanzada
+                        tecnología para ver y escuchar el océano e interactuar con él a un nivel de profundidad nunca
+                        visto.</p>
+                </div>
+            </div>
+            <!--Boton Comprar-->
+            <div class="text-center pb-3">
+                <button type="button" onclick="location.href='error404.html'" class="btnComprar"><i
+                        class="fas fa-shopping-bag fa-2x"></i>
+                    <p class="d-inline ml-2">Comprar!</p>
+                </button>
+            </div>
+        </section>
     </main>
 
     <footer class="navbarcolor navtext text-center py-4">
-        <div class="col-8 py-1 mb-1 mt-1 text-center mx-auto">
+        <div class="col-8 py-1 mb-1 text-center mx-auto">
             <p class="lead"><strong>Visitanos en nuestras redes sociales:</strong></p>
         </div>
         <div class=" navtext text-center mb-4">

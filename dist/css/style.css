@@ -198,6 +198,19 @@ text-decoration: none;
   vertical-align: middle;
   font-size: 20px;
 }
+
+/*BOTON COMPRAR*/
+.btnComprar{
+  color: #007DFC;
+  background-color: #080808;
+  width: 250px;
+}
+
+.btnComprar p{
+  font-size: 25px;
+  color: white;
+}
+
 /*MEDIA QUERIES*/
 
 /*X-SMALL DEVICES PUBLICIDAD*/
@@ -209,6 +222,20 @@ text-decoration: none;
 
       .header-margin{
         margin-bottom: 82.88px;
+      }
+
+      .sliderDetalle{
+        max-height: 200px;
+      }
+      
+      .sliderImg img{
+        object-fit: cover;
+        height: 200px;
+      }
+
+      .iframeDisplay iframe{
+        /* width: 350px; */
+        height: 196.88px;
       }
     }
   
@@ -222,6 +249,20 @@ text-decoration: none;
       .header-margin{
         margin-bottom: 105.63px;
       }
+
+      .sliderDetalle{
+        max-height: 200px;
+      }
+      
+      .sliderImg img{
+        object-fit: cover;
+        height: 200px;
+      }
+
+      .iframeDisplay iframe{
+        /* width: 450px; */
+        height: 253.13px;
+      }
     }
   
   /*MEDIUM DEVICES*/
@@ -233,6 +274,20 @@ text-decoration: none;
 
       .header-margin{
         margin-bottom: 105.63px;
+      }
+
+      .sliderDetalle{
+        max-height: 300px;
+      }
+      
+      .sliderImg img{
+        object-fit: cover;
+        height: 300px;
+      }
+
+      .iframeDisplay iframe{
+        /* width: 600px; */
+        height: 337.50px;
       }
     }
   
@@ -246,6 +301,20 @@ text-decoration: none;
         .header-margin{
             margin-bottom: 105.63px;
           }
+        
+        .sliderDetalle{
+            max-height: 400px;
+          }
+          
+        .sliderImg img{
+            object-fit: cover;
+            height: 400px;
+          }
+
+        .iframeDisplay iframe{
+           /* width: 800px; */
+           height: 450px;
+          }
     }
   
   /*XTRA LARGE DEVICES*/
@@ -257,6 +326,20 @@ text-decoration: none;
 
         .header-margin{
             margin-bottom: 105.63px;
+          }
+
+          .sliderDetalle{
+            max-height: 400px;
+          }
+          
+        .sliderImg img{
+            object-fit: cover;
+            height: 400px;
+          }
+        
+        .iframeDisplay iframe{
+           /* width: 100px; */
+           height: 562.50px;
           }
     } 
 
