@@ -10,6 +10,7 @@ module.exports = {
     registro: './src/js/registro.js',
     contacto: './src/js/contacto.js',
     general: './src/js/general.js',
+    detalle: './src/js/detalle.js',
   },
   output: {
     filename: 'js/[name].js',
@@ -122,6 +123,20 @@ module.exports = {
       inject: true,
       chunks: ["general"],
       filename: "./error404.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/detalle.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+      inject: true,
+      chunks: ["detalle"],
+      filename: "./detalle.html"
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.css'
