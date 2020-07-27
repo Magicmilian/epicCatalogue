@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap";
 import "../css/style.css";
 
-window.login = function () {
+window.login = function (event) {
     event.preventDefault();
     let user = document.getElementById('user').value.toUpperCase();
     let password = document.getElementById('password').value.toUpperCase();
@@ -28,5 +28,28 @@ window.login = function () {
         invalidImagen2.className = "fondoLogin2-invalid";
     }
 }
+
+window.recuperarContraseña = function(event){
+    event.preventDefault();
+    let template_params = {
+        to_name: "Administrador",
+        from_name: document.getElementById('recuperar')
+    }
+     
+     let service_id = "default_service";
+     let template_id = "recupero";
+     emailjs.send(service_id, template_id, template_params).then(
+        function(response) {
+            console.log(response)
+            alert("ok");
+        },
+        function(error) {
+            alert("error");
+        }
+
+     )
+
+}
+
 
 

@@ -52,11 +52,11 @@ body{
   position: absolute;
   width: 0;
   height: 0;
-  border-right: 422px solid transparent;
+  border-right: 435px solid transparent;
   border-top: 13px solid transparent;
   border-left: 50px solid #007DFC;
   border-bottom: 100px solid #007DFC;
-  bottom: 29%;
+  bottom: 28.1%;
 }
 
 .fondoLogin1-invalid{
@@ -71,11 +71,11 @@ body{
   position: absolute;
   width: 0;
   height: 0;
-  border-right: 422px solid transparent;
+  border-right: 435px solid transparent;
   border-top: 13px solid transparent;
   border-left: 50px solid #ED3C3C;
   border-bottom: 100px solid #ED3C3C;
-  bottom: 29%;
+  bottom: 28.1%;  
 }
 
 .imgLogin{
@@ -100,6 +100,22 @@ body{
       .header-margin{
         margin-bottom: 82.88px;
       }
+
+      .fondoLogin2{
+        display: none;
+      }
+
+      .fondoLogin2-invalid{
+        display: none;
+      }
+
+      .fondoLogin1{
+        border-top-right-radius: 75%;
+      }
+
+      .fondoLogin1-invalid{
+        border-top-right-radius: 75%;
+      }
     }
   
   /*SMALL DEVICES*/
@@ -111,6 +127,18 @@ body{
 
       .header-margin{
         margin-bottom: 105.63px;
+      }
+
+      .fondoLogin2{
+        border-right: 412px solid transparent;
+        border-top: 13px solid transparent;
+        bottom: 30%;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 412px solid transparent;
+        border-top: 13px solid transparent;
+        bottom: 30%;
       }
     }
   
@@ -124,35 +152,29 @@ body{
       .header-margin{
         margin-bottom: 105.63px;
       }
-
-      .imgLogin{
-        top: 80px;
-      }
       
       .fondoLogin1{
-        bottom: 114px;
-        height: 100px;
+        height: 250px;
       }
 
       .fondoLogin1-invalid{
-        bottom: 114px;
-        height: 100px;
+        height: 250px;
       }
 
       .fondoLogin2{
-        border-right: 235px solid transparent;
-        border-top: 12px solid transparent;
+        border-right: 555px solid transparent;
+        border-top: 7px solid transparent;
         border-left: 60px solid #007DFC;
         border-bottom: 54px solid #007DFC;
-        bottom: 42.3%;
+        bottom: 36.8%;
       }
 
       .fondoLogin2-invalid{
-        border-right: 235px solid transparent;
-        border-top: 12px solid transparent;
-        border-left: 60px solid #007DFC;
-        border-bottom: 54px solid #007DFC;
-        bottom: 42.3%;
+        border-right: 555px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 60px solid #ED3C3C;
+        border-bottom: 54px solid #ED3C3C;
+        bottom: 36.8%;
       }
 
 
@@ -170,13 +192,25 @@ body{
           }
 
         .fondoLogin2{
-          border-right: 347px solid transparent;
+          border-right: 760px solid transparent;
           bottom: 35%;
+          border-top: 8px solid transparent;
         }
 
         .fondoLogin2-invalid{
-          border-right: 347px solid transparent;
+          border-right: 760px solid transparent;
           bottom: 35%;
+          border-top: 8px solid transparent;
+        }
+
+        .fondoLogin1{
+          bottom: 0px;
+          height: 320px;
+        }
+  
+        .fondoLogin1-invalid{
+          bottom: 0px;
+          height: 320px;
         }
 
     }
