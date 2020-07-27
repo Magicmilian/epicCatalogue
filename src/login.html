@@ -79,7 +79,7 @@
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
                     <!-- recupero y registro -->
                     <div class="mt-3">
-                        <a href="#" data-toggle="modal" data-target="#recuerarContraseña"
+                        <a href="#" data-toggle="modal" data-target="#recuperarContraseña"
                             class="lead text-light text-decoration-none">¿Olvidaste la contraseña?</a>
                         <br>
                         <a class="lead text-light text-decoration-none" href="registro.html">¿Eres nuevo por aqui?
@@ -91,7 +91,7 @@
         </section>
     </main>
     <!-- Modal de recuperar contraseña -->
-    <div class="modal fade" id="recuerarContraseña" tabindex="-1" role="dialog"
+    <div class="modal fade" id="recuperarContraseña" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -102,12 +102,13 @@
                     </button>
                 </div>
                 <form onsubmit="recuperarContraseña(event)">
-                    <div class="modal-body">
-                        <input type="email" id="recuperar" class="w-100"
+                    <div class="modal-body form-group">
+                        <input type="text" id="recuperar" class="form-control w-100"
                             placeholder="Ingresa el email con el cual te registraste.">
+                        <div class="invalid-feedback text-center" id="feedback"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary" id="btnRecuperar">Enviar</button>
                     </div>
                 </form>
             </div>

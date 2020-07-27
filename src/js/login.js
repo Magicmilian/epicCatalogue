@@ -2,6 +2,7 @@ import "@fortawesome/fontawesome-free/js/all.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap";
 import "../css/style.css";
+import Swal from 'sweetalert2';
 
 window.login = function (event) {
     event.preventDefault();
@@ -31,9 +32,12 @@ window.login = function (event) {
 
 window.recuperarContraseña = function(event){
     event.preventDefault();
+    let input = document.getElementById('recuperar');
+    let expresion = /\w+@+\w+\.[a-z]/;
+    if(input.value != "" && expresion.test(input.value)){
     let template_params = {
         to_name: "Administrador",
-        from_name: document.getElementById('recuperar')
+        from_name: document.getElementById('recuperar').value
     }
      
      let service_id = "default_service";
@@ -41,15 +45,25 @@ window.recuperarContraseña = function(event){
      emailjs.send(service_id, template_id, template_params).then(
         function(response) {
             console.log(response)
-            alert("ok");
+            Swal.fire(
+                '¡Correcto!',
+                'Un administrador se comunicara por medio del mail informado para ayudar a recuperar tu contraseña.',
+                'info'
+              ).then(function(){
+                location.reload();
+              }
+              )
         },
         function(error) {
-            alert("error");
+            input.className = "form-control w-100 is-invalid";
+            document.getElementById('feedback').innerText = "Ocurrio un error intente mas tarde."
         }
 
      )
-
+    } else
+    {
+       input.className = "form-control w-100 is-invalid";
+       document.getElementById('feedback').innerText = "Debe ingresar un email valido."
+    }
 }
-
-
 
