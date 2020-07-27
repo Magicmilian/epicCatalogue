@@ -5,10 +5,8 @@ import "../css/style.css";
 
 window.login = function () {
     event.preventDefault();
-    let user = document.getElementById('user').value;
-    let password = document.getElementById('password').value;
-    user = user.toUpperCase();
-    password = password.toUpperCase();
+    let user = document.getElementById('user').value.toUpperCase();
+    let password = document.getElementById('password').value.toUpperCase();
     // Usuarios: (Para agregar uno nuevo se puede agregar un nuevo if manteniendo el contenido del centro.)
     if(user == 'ADMIN' && password == 'ADMIN'){
         console.log("Login Correcto.");
@@ -30,3 +28,5 @@ window.login = function () {
         invalidImagen2.className = "fondoLogin2-invalid";
     }
 }
+
+

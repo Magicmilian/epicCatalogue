@@ -118,6 +118,38 @@ body{
       .header-margin{
         margin-bottom: 105.63px;
       }
+
+      .imgLogin{
+        top: 80px;
+      }
+      
+      .fondoLogin1{
+        bottom: 114px;
+        height: 100px;
+      }
+
+      .fondoLogin1-invalid{
+        bottom: 114px;
+        height: 100px;
+      }
+
+      .fondoLogin2{
+        border-right: 235px solid transparent;
+        border-top: 12px solid transparent;
+        border-left: 60px solid #007DFC;
+        border-bottom: 54px solid #007DFC;
+        bottom: 42.3%;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 235px solid transparent;
+        border-top: 12px solid transparent;
+        border-left: 60px solid #007DFC;
+        border-bottom: 54px solid #007DFC;
+        bottom: 42.3%;
+      }
+
+
     }
   
   /*LARGE DEVICES*/
@@ -131,6 +163,16 @@ body{
             margin-bottom: 105.63px;
           }
 
+        .fondoLogin2{
+          border-right: 347px solid transparent;
+          bottom: 35%;
+        }
+
+        .fondoLogin2-invalid{
+          border-right: 347px solid transparent;
+          bottom: 35%;
+        }
+
     }
   
   /*XTRA LARGE DEVICES*/
@@ -143,4 +185,5 @@ body{
         .header-margin{
             margin-bottom: 105.63px;
           }
+
     } 
