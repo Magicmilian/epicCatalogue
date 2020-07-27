@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap";
 import "../css/style.css";
 
-function requerido(input) {
+window.requerido = function(input) {
 
     if (input.value != "") {
         //   el input tiene texto
@@ -18,7 +18,7 @@ function requerido(input) {
 
 // // validar email
 
-function revisarEmail(input) {
+window.revisarEmail = function (input) {
 
     let expresion = /\w+@\w+\.[a-z]/;
 
@@ -32,7 +32,7 @@ function revisarEmail(input) {
 }
 
 
-function revisarConsulta(consulta) {
+window.revisarConsulta = function (consulta) {
     if (consulta.value.length >= 10) {
         consulta.className = "form-control is-valid";
         return true;
@@ -41,37 +41,10 @@ function revisarConsulta(consulta) {
         return false;
     }
 }
-
-/// validar email
-
-function revisarEmail(input) {
-    // juandami1982@gmail.com para validar
-    let expresion = /\w+@\w+\.[a-z]/;
-
-    if (input.value != "" && expresion.test(input.value)) {
-        input.className = "form-control is-valid";
-        return true;
-    } else {
-        input.className = "form-control is-invalid";
-        return false;
-    }
-}
-
-
-function revisarConsulta(consulta) {
-    if (consulta.value.length >= 10) {
-        consulta.className = "form-control is-valid";
-        return true;
-    } else {
-        consulta.className = "form-control is-invalid";
-        return false;
-    }
-}
-
 
 // boton enviar
 
-function validarGeneral(event) {
+window.validarGeneral = function (event) {
     event.preventDefault();
     console.log('Desde la funcion validar general' + event);
     if (requerido(document.getElementById('nombre')) &&
@@ -87,7 +60,7 @@ function validarGeneral(event) {
     }
 }
 
-function enviarEmail() {
+window.enviarEmail = function () {
     let template_params = {
         from_name: document.getElementById('nombre').value,
         to_name: "juan damichici",
