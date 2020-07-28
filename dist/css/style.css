@@ -39,8 +39,10 @@ body{
 .fondoPantalla{
   background-color: #292929;
 }
-
-#pentagono { 
+.fondoNegroOscuro{
+  background-color: #080808;
+}
+.pentagono { 
   width: 54px; 
   position: relative;
   border-width: 50px 18px 0; 
