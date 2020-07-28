@@ -91,7 +91,7 @@ tr:nth-child(even) {
 
 /*TABLA RESPONSIVE Y SCROLL BAR HORIZONTAL*/
 .table-responsive-custom{
-  display: block;
+  /* display: block; */
   width: 100%;
   overflow-x: auto;
 }
@@ -220,7 +220,6 @@ tr:nth-child(even) {
         width: 70px;
         margin-left: 10px;
       }
-
       .header-margin{
         margin-bottom: 105.63px;
       }
