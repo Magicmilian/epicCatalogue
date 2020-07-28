@@ -81,6 +81,10 @@ body{
   z-index: 1;
 }
 
+.labelForm{
+  font-size: 20px;
+}
+
 /* FONDO DE PANTALLA */
 .fondoPantalla{
   background-color: #292929;
@@ -88,8 +92,12 @@ body{
 
 /*CONFIGURACION ADMINISTRACION*/
 /*CONFIGURACION TABLA*/
-.min-vh-55 {
-  min-height: 55vh !important;
+.min-vh-70 {
+  min-height: 70vh !important;
+}
+
+.min-vh-80 {
+  min-height: 80vh !important;
 }
 
 .tableCustom{

@@ -28,7 +28,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item lead-active">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
@@ -48,7 +48,8 @@
             </div>
         </nav>
     </header>
-    <main class="py-login container">
+    <hr>
+    <main class="py-login container min-vh-70">
         <section class="d-flex row flex-xl-row flex-lg-row flex-md-row flex-sm-column">
             <article class="col-md-6 col-lg-6 col-xl-6">
                 <!-- Imagen -->
@@ -62,7 +63,7 @@
                 <form onsubmit="login(event)">
                     <!-- Usuario -->
                     <div class="form-group mt-2">
-                        <label for="exampleInputEmail1" class="text-light">Usuario</label>
+                        <label  class="text-light"><p class="d-inline labelForm">Usuario</p> </label>
                         <input type="text" class="form-control" id="user" aria-describedby="emailHelp"
                             placeholder="usuario">
                         <div class="invalid-feedback">Verifique que el usuario ingresado coincida con la contraseña.
@@ -70,7 +71,7 @@
                     </div>
                     <!-- contraseña -->
                     <div class="form-group">
-                        <label for="exampleInputPassword1" class="text-light">Contraseña</label>
+                        <label  class="text-light"><p class="d-inline labelForm">Contraseña</p></label>
                         <input type="password" class="form-control" id="password" placeholder="***********">
                         <div class="invalid-feedback">Contraseña Incorrecta.</div>
 

@@ -7,13 +7,10 @@
 /*NAVBAR Y GENERALES*/
 body{
   font-family: 'Alegreya Sans SC', sans-serif;
-<<<<<<< HEAD
 }
 
 #destacado{
   background-color: #131313;
-=======
->>>>>>> maquetadoLogin
 }
 
 .navbarcolor{
@@ -90,6 +87,10 @@ body{
   z-index: 1;
 }
 
+.labelForm{
+  font-size: 20px;
+}
+
 /* FONDO DE PANTALLA */
 .fondoPantalla{
   background-color: #292929;
@@ -97,8 +98,12 @@ body{
 
 /*CONFIGURACION ADMINISTRACION*/
 /*CONFIGURACION TABLA*/
-.min-vh-55 {
-  min-height: 55vh !important;
+.min-vh-70 {
+  min-height: 70vh !important;
+}
+
+.min-vh-80 {
+  min-height: 80vh !important;
 }
 
 .tableCustom{
@@ -276,7 +281,6 @@ text-decoration: none;
         margin-bottom: 82.88px;
       }
 
-<<<<<<< HEAD
       .sliderDetalle{
         max-height: 200px;
       }
@@ -293,8 +297,9 @@ text-decoration: none;
 
       .descripcionDetalles{
         font-size: 17px;
-=======
-      .fondoLogin1{
+      }
+      
+        .fondoLogin1{
         position: absolute;
         background-color: #007DFC;
         width: 90%;
@@ -327,7 +332,6 @@ text-decoration: none;
         border-left: 0px;
         bottom: 150px;
         width: 90%;
->>>>>>> maquetadoLogin
       }
     }
   
@@ -342,7 +346,6 @@ text-decoration: none;
         margin-bottom: 105.63px;
       }
 
-<<<<<<< HEAD
       .sliderDetalle{
         max-height: 200px;
       }
@@ -359,8 +362,8 @@ text-decoration: none;
 
       .descripcionDetalles{
         font-size: 17px;
-=======
-      .fondoLogin1{
+      }
+       .fondoLogin1{
         position: absolute;
         background-color: #007DFC;
         width: 85%;
@@ -388,12 +391,11 @@ text-decoration: none;
         border-top: 13px solid transparent;
         border-left: 0px;
         bottom: 150px;
->>>>>>> maquetadoLogin
       }
     }
   
-  /*MEDIUM DEVICES*/
-  @media all and (min-width: 768px) and (max-width:991px){
+/*MEDIUM DEVICES*/
+@media all and (min-width: 768px) and (max-width:991px){
     .logohead{
         width: 70px;
         margin-left: 10px;
@@ -402,7 +404,6 @@ text-decoration: none;
       .header-margin{
         margin-bottom: 105.63px;
       }
-<<<<<<< HEAD
 
       .sliderDetalle{
         max-height: 300px;
@@ -421,7 +422,6 @@ text-decoration: none;
       .descripcionDetalles{
         font-size: 17px;
       }
-=======
       
       .fondoLogin1{
         position: absolute;
@@ -457,10 +457,9 @@ text-decoration: none;
       }
 
 
->>>>>>> maquetadoLogin
     }
   
-  /*LARGE DEVICES*/
+/*LARGE DEVICES*/
     @media all and (min-width: 991px) and (max-width:1200px){
         .logohead{
             width: 70px;
@@ -470,7 +469,6 @@ text-decoration: none;
         .header-margin{
             margin-bottom: 105.63px;
           }
-<<<<<<< HEAD
         
         .sliderDetalle{
             max-height: 400px;
@@ -489,7 +487,6 @@ text-decoration: none;
         .descripcionDetalles{
           font-size: 16.5px;
           }
-=======
 
         .fondoLogin2{
           position: absolute;
@@ -529,7 +526,6 @@ text-decoration: none;
           bottom: 0px;
         }
 
->>>>>>> maquetadoLogin
     }
   
   /*XTRA LARGE DEVICES*/
@@ -543,7 +539,6 @@ text-decoration: none;
             margin-bottom: 105.63px;
           }
 
-<<<<<<< HEAD
           .sliderDetalle{
             max-height: 400px;
           }
@@ -561,8 +556,6 @@ text-decoration: none;
         .descripcionDetalles{
           font-size: 20px;
         }
-=======
->>>>>>> maquetadoLogin
     } 
 
 
@@ -666,4 +659,5 @@ text-decoration: none;
 
 
 
+    
 
