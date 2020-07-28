@@ -231,6 +231,10 @@ text-decoration: none;
         /* width: 350px; */
         height: 196.88px;
       }
+
+      .descripcionDetalles{
+        font-size: 17px;
+      }
     }
   
   /*SMALL DEVICES*/
@@ -256,6 +260,10 @@ text-decoration: none;
       .iframeDisplay iframe{
         /* width: 450px; */
         height: 253.13px;
+      }
+
+      .descripcionDetalles{
+        font-size: 17px;
       }
     }
   
@@ -283,6 +291,10 @@ text-decoration: none;
         /* width: 600px; */
         height: 337.50px;
       }
+
+      .descripcionDetalles{
+        font-size: 17px;
+      }
     }
   
   /*LARGE DEVICES*/
@@ -308,6 +320,10 @@ text-decoration: none;
         .iframeDisplay iframe{
            /* width: 800px; */
            height: 450px;
+          }
+
+        .descripcionDetalles{
+          font-size: 16.5px;
           }
     }
   
@@ -335,6 +351,10 @@ text-decoration: none;
            /* width: 100px; */
            height: 562.50px;
           }
+        
+        .descripcionDetalles{
+          font-size: 20px;
+        }
     } 
 
 
