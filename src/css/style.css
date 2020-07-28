@@ -1,7 +1,7 @@
 /*NAVBAR*/
 
 body{
-  font-family: 'Red Rose', cursive;;
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 .navbarcolor{
@@ -29,6 +29,7 @@ body{
   width: 100%;
 }
 
+/*CONFIGURACION DE LOGIN*/
 .py-login{
   padding-top: 1%;
   padding-bottom: 5%;
@@ -95,20 +96,39 @@ body{
         margin-bottom: 82.88px;
       }
 
-      .fondoLogin2{
-        display: none;
-      }
-
-      .fondoLogin2-invalid{
-        display: none;
-      }
-
       .fondoLogin1{
-        border-top-right-radius: 75%;
+        position: absolute;
+        background-color: #007DFC;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
       }
 
       .fondoLogin1-invalid{
-        border-top-right-radius: 75%;
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin2{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        width: 90%;
+        border-left: 0px;
+        bottom: 150px;
+
+      }
+
+      .fondoLogin2-invalid{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+        width: 90%;
       }
     }
   
@@ -123,16 +143,34 @@ body{
         margin-bottom: 105.63px;
       }
 
+      .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
       .fondoLogin2{
-        border-right: 412px solid transparent;
+        border-right: 459px solid transparent;
         border-top: 13px solid transparent;
-        bottom: 30%;
+        border-left: 0px;
+        bottom: 150px;
       }
 
       .fondoLogin2-invalid{
-        border-right: 412px solid transparent;
+        border-right: 459px solid transparent;
         border-top: 13px solid transparent;
-        bottom: 30%;
+        border-left: 0px;
+        bottom: 150px;
       }
     }
   
@@ -148,27 +186,36 @@ body{
       }
       
       .fondoLogin1{
-        height: 250px;
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 18px;
       }
 
       .fondoLogin1-invalid{
-        height: 250px;
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 84px;
       }
+    
 
       .fondoLogin2{
-        border-right: 555px solid transparent;
+        border-right: 306px solid transparent;
         border-top: 7px solid transparent;
-        border-left: 60px solid #007DFC;
+        border-left: 0px solid transparent ;
         border-bottom: 54px solid #007DFC;
-        bottom: 36.8%;
+        bottom: 168px;
       }
 
       .fondoLogin2-invalid{
-        border-right: 555px solid transparent;
+        border-right: 306px solid transparent;
         border-top: 7px solid transparent;
-        border-left: 60px solid #ED3C3C;
+        border-left: 0px solid transparent;
         border-bottom: 54px solid #ED3C3C;
-        bottom: 36.8%;
+        bottom: 234px;
       }
 
 
@@ -186,25 +233,41 @@ body{
           }
 
         .fondoLogin2{
-          border-right: 760px solid transparent;
-          bottom: 35%;
-          border-top: 8px solid transparent;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #007DFC;
+          border-bottom: 100px solid #007DFC;
+          bottom: 150px;
         }
 
         .fondoLogin2-invalid{
-          border-right: 760px solid transparent;
-          bottom: 35%;
-          border-top: 8px solid transparent;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #ED3C3C;
+          border-bottom: 100px solid #ED3C3C;
+          bottom: 150px; 
         }
 
         .fondoLogin1{
+          position: absolute;
+          background-color: #007DFC;
+          width: 85%;
+          height: 150px;
           bottom: 0px;
-          height: 320px;
         }
   
         .fondoLogin1-invalid{
+          position: absolute;
+          background-color: #ED3C3C;
+          width: 85%;
+          height: 150px;
           bottom: 0px;
-          height: 320px;
         }
 
     }
