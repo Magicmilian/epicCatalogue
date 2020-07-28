@@ -10,6 +10,7 @@ module.exports = {
     registro: './src/js/registro.js',
     contacto: './src/js/contacto.js',
     general: './src/js/general.js',
+    error404: './src/js/error404.js',
   },
   output: {
     filename: 'js/[name].js',
