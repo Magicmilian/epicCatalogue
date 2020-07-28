@@ -10,7 +10,11 @@ module.exports = {
     registro: './src/js/registro.js',
     contacto: './src/js/contacto.js',
     general: './src/js/general.js',
+<<<<<<< HEAD
     detalle: './src/js/detalle.js',
+=======
+    login: './src/js/login.js',
+>>>>>>> maquetadoLogin
   },
   output: {
     filename: 'js/[name].js',
@@ -111,7 +115,11 @@ module.exports = {
       filename: "./registro.html"
     }),
     new HtmlWebpackPlugin({
+<<<<<<< HEAD
       template: './src/error404.html',
+=======
+      template: './src/login.html',
+>>>>>>> maquetadoLogin
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -121,6 +129,7 @@ module.exports = {
         useShortDoctype: true
       },
       inject: true,
+<<<<<<< HEAD
       chunks: ["general"],
       filename: "./error404.html"
     }),
@@ -137,6 +146,10 @@ module.exports = {
       inject: true,
       chunks: ["detalle"],
       filename: "./detalle.html"
+=======
+      chunks: ["login"],
+      filename: "./login.html"
+>>>>>>> maquetadoLogin
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.css'

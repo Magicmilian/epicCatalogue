@@ -32,6 +32,55 @@ body{
   width: 100%;
 }
 
+/*CONFIGURACION DE LOGIN*/
+.py-login{
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.fondoLogin1{
+  position: absolute;
+  background-color: #007DFC;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+.fondoLogin2{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 435px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #007DFC;
+  border-bottom: 100px solid #007DFC;
+  bottom: 28.1%;
+}
+
+.fondoLogin1-invalid{
+  position: absolute;
+  background-color: #ED3C3C;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+.fondoLogin2-invalid{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 435px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #ED3C3C;
+  border-bottom: 100px solid #ED3C3C;
+  bottom: 28.1%;  
+}
+
+.imgLogin{
+  position: relative;
+  z-index: 1;
+}
+
 /* FONDO DE PANTALLA */
 .fondoPantalla{
   background-color: #292929;
@@ -235,6 +284,41 @@ text-decoration: none;
       .descripcionDetalles{
         font-size: 17px;
       }
+      
+        .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin2{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        width: 90%;
+        border-left: 0px;
+        bottom: 150px;
+
+      }
+
+      .fondoLogin2-invalid{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+        width: 90%;
+      }
     }
   
   /*SMALL DEVICES*/
@@ -265,10 +349,39 @@ text-decoration: none;
       .descripcionDetalles{
         font-size: 17px;
       }
+       .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin2{
+        border-right: 459px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 459px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+      }
     }
   
-  /*MEDIUM DEVICES*/
-  @media all and (min-width: 768px) and (max-width:991px){
+/*MEDIUM DEVICES*/
+@media all and (min-width: 768px) and (max-width:991px){
     .logohead{
         width: 70px;
         margin-left: 10px;
@@ -295,9 +408,44 @@ text-decoration: none;
       .descripcionDetalles{
         font-size: 17px;
       }
+      
+      .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 18px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 84px;
+      }
+    
+
+      .fondoLogin2{
+        border-right: 306px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 0px solid transparent ;
+        border-bottom: 54px solid #007DFC;
+        bottom: 168px;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 306px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 54px solid #ED3C3C;
+        bottom: 234px;
+      }
+
+
     }
   
-  /*LARGE DEVICES*/
+/*LARGE DEVICES*/
     @media all and (min-width: 991px) and (max-width:1200px){
         .logohead{
             width: 70px;
@@ -325,6 +473,45 @@ text-decoration: none;
         .descripcionDetalles{
           font-size: 16.5px;
           }
+
+        .fondoLogin2{
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #007DFC;
+          border-bottom: 100px solid #007DFC;
+          bottom: 150px;
+        }
+
+        .fondoLogin2-invalid{
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #ED3C3C;
+          border-bottom: 100px solid #ED3C3C;
+          bottom: 150px; 
+        }
+
+        .fondoLogin1{
+          position: absolute;
+          background-color: #007DFC;
+          width: 85%;
+          height: 150px;
+          bottom: 0px;
+        }
+  
+        .fondoLogin1-invalid{
+          position: absolute;
+          background-color: #ED3C3C;
+          width: 85%;
+          height: 150px;
+          bottom: 0px;
+        }
+
     }
   
   /*XTRA LARGE DEVICES*/
@@ -458,3 +645,4 @@ text-decoration: none;
 
 
 
+    

@@ -7,10 +7,13 @@
 /*NAVBAR Y GENERALES*/
 body{
   font-family: 'Alegreya Sans SC', sans-serif;
+<<<<<<< HEAD
 }
 
 #destacado{
   background-color: #131313;
+=======
+>>>>>>> maquetadoLogin
 }
 
 .navbarcolor{
@@ -36,6 +39,55 @@ body{
 
 .footer-custom{
   width: 100%;
+}
+
+/*CONFIGURACION DE LOGIN*/
+.py-login{
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.fondoLogin1{
+  position: absolute;
+  background-color: #007DFC;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+.fondoLogin2{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 435px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #007DFC;
+  border-bottom: 100px solid #007DFC;
+  bottom: 28.1%;
+}
+
+.fondoLogin1-invalid{
+  position: absolute;
+  background-color: #ED3C3C;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+.fondoLogin2-invalid{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 435px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #ED3C3C;
+  border-bottom: 100px solid #ED3C3C;
+  bottom: 28.1%;  
+}
+
+.imgLogin{
+  position: relative;
+  z-index: 1;
 }
 
 /* FONDO DE PANTALLA */
@@ -224,6 +276,7 @@ text-decoration: none;
         margin-bottom: 82.88px;
       }
 
+<<<<<<< HEAD
       .sliderDetalle{
         max-height: 200px;
       }
@@ -240,6 +293,41 @@ text-decoration: none;
 
       .descripcionDetalles{
         font-size: 17px;
+=======
+      .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin2{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        width: 90%;
+        border-left: 0px;
+        bottom: 150px;
+
+      }
+
+      .fondoLogin2-invalid{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+        width: 90%;
+>>>>>>> maquetadoLogin
       }
     }
   
@@ -254,6 +342,7 @@ text-decoration: none;
         margin-bottom: 105.63px;
       }
 
+<<<<<<< HEAD
       .sliderDetalle{
         max-height: 200px;
       }
@@ -270,6 +359,36 @@ text-decoration: none;
 
       .descripcionDetalles{
         font-size: 17px;
+=======
+      .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin2{
+        border-right: 459px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 459px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+>>>>>>> maquetadoLogin
       }
     }
   
@@ -283,6 +402,7 @@ text-decoration: none;
       .header-margin{
         margin-bottom: 105.63px;
       }
+<<<<<<< HEAD
 
       .sliderDetalle{
         max-height: 300px;
@@ -301,6 +421,43 @@ text-decoration: none;
       .descripcionDetalles{
         font-size: 17px;
       }
+=======
+      
+      .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 18px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 84px;
+      }
+    
+
+      .fondoLogin2{
+        border-right: 306px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 0px solid transparent ;
+        border-bottom: 54px solid #007DFC;
+        bottom: 168px;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 306px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 54px solid #ED3C3C;
+        bottom: 234px;
+      }
+
+
+>>>>>>> maquetadoLogin
     }
   
   /*LARGE DEVICES*/
@@ -313,6 +470,7 @@ text-decoration: none;
         .header-margin{
             margin-bottom: 105.63px;
           }
+<<<<<<< HEAD
         
         .sliderDetalle{
             max-height: 400px;
@@ -331,6 +489,47 @@ text-decoration: none;
         .descripcionDetalles{
           font-size: 16.5px;
           }
+=======
+
+        .fondoLogin2{
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #007DFC;
+          border-bottom: 100px solid #007DFC;
+          bottom: 150px;
+        }
+
+        .fondoLogin2-invalid{
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #ED3C3C;
+          border-bottom: 100px solid #ED3C3C;
+          bottom: 150px; 
+        }
+
+        .fondoLogin1{
+          position: absolute;
+          background-color: #007DFC;
+          width: 85%;
+          height: 150px;
+          bottom: 0px;
+        }
+  
+        .fondoLogin1-invalid{
+          position: absolute;
+          background-color: #ED3C3C;
+          width: 85%;
+          height: 150px;
+          bottom: 0px;
+        }
+
+>>>>>>> maquetadoLogin
     }
   
   /*XTRA LARGE DEVICES*/
@@ -344,6 +543,7 @@ text-decoration: none;
             margin-bottom: 105.63px;
           }
 
+<<<<<<< HEAD
           .sliderDetalle{
             max-height: 400px;
           }
@@ -361,6 +561,8 @@ text-decoration: none;
         .descripcionDetalles{
           font-size: 20px;
         }
+=======
+>>>>>>> maquetadoLogin
     } 
 
 
