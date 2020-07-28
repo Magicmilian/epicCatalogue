@@ -52,6 +52,9 @@ window.validarGeneral = function (event) {
         revisarConsulta(document.getElementById('consulta'))) {
         enviarEmail();
     } else {
+        requerido(document.getElementById('nombre'));
+        revisarEmail(document.getElementById('email'));
+        revisarConsulta(document.getElementById('consulta'));
         document.getElementById('msjEnvio').className = 'alert alert-danger my-3';
         document.getElementById('msjEnvio').innerText = 'Debe completar todos los campos';
     }
