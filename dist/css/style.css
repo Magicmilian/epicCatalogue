@@ -35,9 +35,7 @@ background-image: linear-gradient(90deg, #085eea 36%, #2AF598 100%);
 .buscador:hover{
   background-color: #131313;
 } */
-.titulo{
-  background-color: #131313;
-}
+
 .navbarcolor{
     background-color: #303536;
 }
@@ -63,6 +61,59 @@ background-image: linear-gradient(90deg, #085eea 36%, #2AF598 100%);
   width: 100%;
 }
 
+/*CONFIGURACION DE LOGIN*/
+.py-login{
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.fondoLogin1{
+  position: absolute;
+  background-color: #007DFC;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+.fondoLogin2{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 435px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #007DFC;
+  border-bottom: 100px solid #007DFC;
+  bottom: 28.1%;
+}
+
+.fondoLogin1-invalid{
+  position: absolute;
+  background-color: #ED3C3C;
+  width: 85%;
+  height: 150px;
+  bottom: 0px;
+}
+
+.fondoLogin2-invalid{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 435px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 50px solid #ED3C3C;
+  border-bottom: 100px solid #ED3C3C;
+  bottom: 28.1%;  
+}
+
+.imgLogin{
+  position: relative;
+  z-index: 1;
+}
+
+.labelForm{
+  font-size: 20px;
+}
+
 /* FONDO DE PANTALLA */
 .fondoPantalla{
   background-color: #292929;
@@ -70,8 +121,12 @@ background-image: linear-gradient(90deg, #085eea 36%, #2AF598 100%);
 
 /*CONFIGURACION ADMINISTRACION*/
 /*CONFIGURACION TABLA*/
-.min-vh-55 {
-  min-height: 55vh !important;
+.min-vh-70 {
+  min-height: 70vh !important;
+}
+
+.min-vh-80 {
+  min-height: 80vh !important;
 }
 
 .tableCustom{
@@ -87,9 +142,27 @@ tr:nth-child(even) {
   background-color: #303536;
 }
 
+.sorter{
+  cursor: pointer;
+}
+
 /*OVERFLOW CAMPO DESCRIPCION*/
-.descripcion{
+.tablaDescripcion{
   max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tablaNombre{
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tablaCategoria{
+  max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -194,6 +267,30 @@ tr:nth-child(even) {
 .opciones{
   min-width: 150px;
 }
+
+/*PAGINA DETALLE DE JUEGO*/
+/*BOTON VOLVER ATRAS*/
+.volverAtras:hover{
+text-decoration: none;
+}
+
+.btnVolverAtras{
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+/*BOTON COMPRAR*/
+.btnComprar{
+  color: #007DFC;
+  background-color: #080808;
+  width: 250px;
+}
+
+.btnComprar p{
+  font-size: 25px;
+  color: white;
+}
+
 /*MEDIA QUERIES*/
 
 /*X-SMALL DEVICES PUBLICIDAD*/
@@ -205,6 +302,59 @@ tr:nth-child(even) {
 
       .header-margin{
         margin-bottom: 82.88px;
+      }
+
+      .sliderDetalle{
+        max-height: 200px;
+      }
+      
+      .sliderImg img{
+        object-fit: cover;
+        height: 200px;
+      }
+
+      .iframeDisplay iframe{
+        /* width: 350px; */
+        height: 196.88px;
+      }
+
+      .descripcionDetalles{
+        font-size: 17px;
+      }
+      
+        .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 90%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin2{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        width: 90%;
+        border-left: 0px;
+        bottom: 150px;
+
+      }
+
+      .fondoLogin2-invalid{
+        position: absolute;
+        border-right: 200px solid transparent;
+        border-top: 0px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+        width: 90%;
       }
     }
   
@@ -218,10 +368,57 @@ tr:nth-child(even) {
       .header-margin{
         margin-bottom: 105.63px;
       }
+
+      .sliderDetalle{
+        max-height: 200px;
+      }
+      
+      .sliderImg img{
+        object-fit: cover;
+        height: 200px;
+      }
+
+      .iframeDisplay iframe{
+        /* width: 450px; */
+        height: 253.13px;
+      }
+
+      .descripcionDetalles{
+        font-size: 17px;
+      }
+       .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 0px;
+      }
+
+      .fondoLogin2{
+        border-right: 459px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 459px solid transparent;
+        border-top: 13px solid transparent;
+        border-left: 0px;
+        bottom: 150px;
+      }
     }
   
-  /*MEDIUM DEVICES*/
-  @media all and (min-width: 768px) and (max-width:991px){
+/*MEDIUM DEVICES*/
+@media all and (min-width: 768px) and (max-width:991px){
     .logohead{
         width: 70px;
         margin-left: 10px;
@@ -229,9 +426,62 @@ tr:nth-child(even) {
       .header-margin{
         margin-bottom: 105.63px;
       }
+
+      .sliderDetalle{
+        max-height: 300px;
+      }
+      
+      .sliderImg img{
+        object-fit: cover;
+        height: 300px;
+      }
+
+      .iframeDisplay iframe{
+        /* width: 600px; */
+        height: 337.50px;
+      }
+
+      .descripcionDetalles{
+        font-size: 17px;
+      }
+      
+      .fondoLogin1{
+        position: absolute;
+        background-color: #007DFC;
+        width: 85%;
+        height: 150px;
+        bottom: 18px;
+      }
+
+      .fondoLogin1-invalid{
+        position: absolute;
+        background-color: #ED3C3C;
+        width: 85%;
+        height: 150px;
+        bottom: 84px;
+      }
+    
+
+      .fondoLogin2{
+        border-right: 306px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 0px solid transparent ;
+        border-bottom: 54px solid #007DFC;
+        bottom: 168px;
+      }
+
+      .fondoLogin2-invalid{
+        border-right: 306px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 54px solid #ED3C3C;
+        bottom: 234px;
+      }
+
+
     }
   
-  /*LARGE DEVICES*/
+/*LARGE DEVICES*/
     @media all and (min-width: 991px) and (max-width:1200px){
         .logohead{
             width: 70px;
@@ -241,6 +491,63 @@ tr:nth-child(even) {
         .header-margin{
             margin-bottom: 105.63px;
           }
+        
+        .sliderDetalle{
+            max-height: 400px;
+          }
+          
+        .sliderImg img{
+            object-fit: cover;
+            height: 400px;
+          }
+
+        .iframeDisplay iframe{
+           /* width: 800px; */
+           height: 450px;
+          }
+
+        .descripcionDetalles{
+          font-size: 16.5px;
+          }
+
+        .fondoLogin2{
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #007DFC;
+          border-bottom: 100px solid #007DFC;
+          bottom: 150px;
+        }
+
+        .fondoLogin2-invalid{
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-right: 408px solid transparent;
+          border-top: 13px solid transparent;
+          border-left: 0px solid #ED3C3C;
+          border-bottom: 100px solid #ED3C3C;
+          bottom: 150px; 
+        }
+
+        .fondoLogin1{
+          position: absolute;
+          background-color: #007DFC;
+          width: 85%;
+          height: 150px;
+          bottom: 0px;
+        }
+  
+        .fondoLogin1-invalid{
+          position: absolute;
+          background-color: #ED3C3C;
+          width: 85%;
+          height: 150px;
+          bottom: 0px;
+        }
+
     }
   
   /*XTRA LARGE DEVICES*/
@@ -253,6 +560,24 @@ tr:nth-child(even) {
         .header-margin{
             margin-bottom: 105.63px;
           }
+
+          .sliderDetalle{
+            max-height: 400px;
+          }
+          
+        .sliderImg img{
+            object-fit: cover;
+            height: 400px;
+          }
+        
+        .iframeDisplay iframe{
+           /* width: 100px; */
+           height: 562.50px;
+          }
+        
+        .descripcionDetalles{
+          font-size: 20px;
+        }
     } 
 
 
@@ -356,4 +681,5 @@ tr:nth-child(even) {
 
 
 
+    
 

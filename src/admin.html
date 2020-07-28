@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolling Games - Administracion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -45,42 +45,24 @@
     <main class="fondoPantalla">
         <hr />
         <h2 class="text-light text-center display-5">Administracion de Juegos</h2>
-        <div class="container text-right mt-3"><button data-toggle="modal" data-target="#modalProducto"
+        <div class="container text-right mt-3"><button onclick="limpiarForm()" data-toggle="modal" data-target="#modalProducto"
                 class="btn btn-light"><i class="fas fa-plus-circle fa-1x"></i>
                 Agregar</button></div>
 
-        <section class="container min-vh-55">
+        <section class="container min-vh-70">
             <div class="mt-4 table-responsive-custom p-0">
-                <table class="table tableCustom">
+                <table id="tablaProdAll" class="table tableCustom">
                     <thead>
                         <tr>
-                            <th scope="col">Codigo</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Categoria</th>
+                            <th class="sorter" onclick="sortTable(0)" scope="col">Codigo <i class="fas fa-sort"></i></th>
+                            <th class="sorter" onclick="sortTable(1)" scope="col">Nombre <i class="fas fa-sort"></i></th>
+                            <th class="sorter" onclick="sortTable(2)" scope="col">Categoria <i class="fas fa-sort"></i></th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Publicado</th>
                             <th scope="col">Opciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row">1</th>
-                            <td>Fortnite</td>
-                            <td>Battle Royale</td>
-                            <td class="descripcion">Frenetico juego multijudagor de disparos en tercera
-                                persona.</td>
-                            <td>
-                                <label class="checkContainer">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </td>
-                            <td class="opciones">
-                                <button class="btnSizeCustom"><i class="far fa-trash-alt fa-1x"></i></button>
-                                <button><i class="far fa-edit fa-1x"></i></button>
-                                <button><i class="far fa-star fa-1x"></i></button>
-                            </td>
-                        </tr>
+                    <tbody id="tablaProductos">
                     </tbody>
                 </table>
             </div>
@@ -99,29 +81,31 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="formProducto" action="">
+                    <form id="formProducto" onsubmit="agregarModificar(event)" action="">
                         <div class="form-group">
-                            <label for="">Codigo</label>
-                            <input id="codigo" type="number" placeholder="Ej: 1" class="form-control">
+                            <label for="">Codigo Unico</label>
+                            <input id="codigo" type="number" onblur="validarCodigo(this)" placeholder="Ej: 127854"
+                                class="form-control">
                             <div class="valid-feedback">
                             </div>
                             <div class="invalid-feedback">
-                                Ingrese un numero valido. Solo debe ingresar numeros.
+                                Ingrese un codigo valido. Solo debe ingresar numeros. No puede repetir codigos.
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Nombre</label>
-                            <input id="nombre" type="text" placeholder="Ej: Ironman" class="form-control">
+                            <input id="nombre" type="text" onblur="campoRequerido(this)"
+                                placeholder="Ej: Horizon Zero Dawn: Complete Edition" class="form-control">
                             <div class="valid-feedback">
-                                Todo en orden
                             </div>
                             <div class="invalid-feedback">
-                                Debe completar el campo con su nombre.
+                                Debe completar el campo con el nombre del juego.
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Categoria</label>
-                            <input id="categoria" type="text" placeholder="Ej: Superheroe" class="form-control">
+                            <input id="categoria" type="text" onblur="campoRequerido(this)" placeholder="Ej: Aventura"
+                                class="form-control">
                             <div class="valid-feedback">
                             </div>
                             <div class="invalid-feedback">
@@ -130,26 +114,64 @@
                         </div>
                         <div class="form-group">
                             <label for="">Descripcion</label>
-                            <input id="descripcion" type="text" placeholder="Ej: Superheroe de Marvel"
+                            <input id="descripcion" type="text" onblur="campoRequerido(this)"
+                                placeholder="Ej: Descubre junto a Aloy los misterios de su existencia..."
                                 class="form-control">
                             <div class="valid-feedback">
                             </div>
                             <div class="invalid-feedback">
-                                Debe completar el campo con una descripcion breve.
+                                Debe completar el campo con una descripcion del juego.
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="">Imagen</label>
-                            <input id="imagen" type="text" placeholder="Ej: Ironman.png" class="form-control">
+                            <label for="">Imagen 1</label>
+                            <input id="imagen1" type="text" onblur="campoRequerido(this)"
+                                placeholder="Ej: horizon_zero.png" class="form-control">
                             <div class="valid-feedback">
                             </div>
                             <div class="invalid-feedback">
                                 Debe introducir el nombre del archivo de imagen.
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="">Imagen 2</label>
+                            <input id="imagen2" type="text" onblur="campoRequerido(this)"
+                                placeholder="Ej: horizon_zero2.png" class="form-control">
+                            <div class="valid-feedback">
+                            </div>
+                            <div class="invalid-feedback">
+                                Debe introducir el nombre del archivo de imagen.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Imagen 3</label>
+                            <input id="imagen3" type="text" onblur="campoRequerido(this)"
+                                placeholder="Ej: horizon_zero3.png" class="form-control">
+                            <div class="valid-feedback">
+                            </div>
+                            <div class="invalid-feedback">
+                                Debe introducir el nombre del archivo de imagen.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">URL - Video (Opcional)</label>
+                            <input id="iframeurl" type="url" onblur="validarUrl(this)"
+                                placeholder="Ej: https://www.youtube.com/watch?v=_BvZvkT5QHw" class="form-control">
+                            <div class="valid-feedback">
+                            </div>
+                            <div class="invalid-feedback">
+                                Debe introducir una direccion URL valida.
+                            </div>
+                        </div>
                         <div class="d-flex justify-content-center">
                             <button id="btnEnviar" type="submit"
                                 class="btn btn-primary modal-footer d-flex justify-content-center">Enviar</button>
+                        </div>
+                        <div id="validacionGeneral" class="form-control d-none"></div>
+                        <div class="valid-feedback">
+                        </div>
+                        <div class="invalid-feedback mt-4">
+                            Debe completar correctamente los campos detallados.
                         </div>
                     </form>
                 </div>
