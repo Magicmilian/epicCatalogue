@@ -11,11 +11,11 @@ window.login = function (event) {
     // Usuarios: (Para agregar uno nuevo se puede agregar un nuevo if manteniendo el contenido del centro.)
     if(user == 'ADMIN' && password == 'ADMIN'){
         console.log("Login Correcto.");
-        location.href = "./src/admin.html";
+        location.href = "admin.html";
     }
     if(user == 'ROLLING' && password == 'CODE2020'){
         console.log("Login Correcto.");
-        location.href = "./src/admin.html";
+        location.href = "admin.html";
     }
     //Modifica pagina en caso de usuario incorrecto:
     else{

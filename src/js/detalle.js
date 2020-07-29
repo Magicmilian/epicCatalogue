@@ -3,13 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap";
 import "../css/style.css";
 
-//TEST
-detallesJuego(1);
+dibujarDetalles();
 
-window.dibujarDetalles = function(){
-    // let codigoJuego = JSON.parse(localStorage.getItem("codigoKey"));
-    // detallesJuego(codigoJuego);
-
+function dibujarDetalles(){
+    let codigoJuego = JSON.parse(localStorage.getItem("codigoKey"));
+    console.log(codigoJuego)
+    detallesJuego(codigoJuego);
 }
 
 function detallesJuego(codigo){

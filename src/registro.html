@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epic Catalogue</title>
+    <title>Rolling Games - Registro</title>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap" rel="stylesheet">
 </head>
 
@@ -43,18 +43,18 @@
     </header>
     <!-- Empieza cuerpo de pagina registro -->
     <main class="fondoPantalla min-vh-80">
-        <div class=" col-lg-4 shadow-none py-5 mx-auto fondoPantalla rounded">
+        <div class=" col-8 shadow-none py-5 mx-auto fondoPantalla rounded">
             <form onsubmit="formularioRegistro(event)" id="formRegistro">
                 <div class="row">
                 <!-- nombre -->
-                    <div class="col-6">
+                    <div class="col-sm-12 col-md-6">
                         <label for="nombreRegistro" class="text-light">Nombre</label>
                         <input type="text" class="form-control" id="nombreRegistro" placeholder="Juan" onblur="requiereNombre(this)">
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">Debes agregar tu nombre</div>
                     </div>
                 <!-- apellido -->
-                    <div class=" col-6">
+                    <div class="col-sm-12 col-md-6">
                         <label for="exampleInputLastName1" class="text-light">Apellido</label>
                         <input type="text" class="form-control" id="apellidoRegistro" placeholder="Perez" onblur="requiereApellido(this)">
                         <div class="valid-feedback"></div>
