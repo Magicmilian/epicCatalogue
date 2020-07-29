@@ -6,8 +6,8 @@ import Swal from "sweetalert2";
 
 window.login = function (event) {
   event.preventDefault();
-  let user = document.getElementById("user").value();
-  let password = document.getElementById("password").value();
+  let user = document.getElementById("user").value;
+  let password = document.getElementById("password").value;
   // Usuarios: (Para agregar uno nuevo se puede agregar un nuevo if manteniendo el contenido del centro.)
   if (user == "ADMIN" && password == "ADMIN") {
     console.log("Login Correcto.");
