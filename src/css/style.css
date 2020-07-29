@@ -1,11 +1,8 @@
-/*NAVBAR Y GENERALES*/
+/* COSAS DELFI */
 body{
   font-family: 'Alegreya Sans SC', sans-serif;
   background-color: #292929;
 }
-/* #destacado{
-  background-color: #131313;
-} */
 #destacado{
   background-color: #0886ea;
 background-image: linear-gradient(180deg, #0886ea 27%, #2AF598 100%);
@@ -29,7 +26,11 @@ background-image: linear-gradient(90deg, #085eea 36%, #2AF598 100%);
 .buscador:hover{
   background-color: #131313;
 } */
-
+.titulo{
+    background-color: #131313;
+  }
+  /* FIN COSAS DELFI */
+  /*NAVBAR Y GENERALES (Maxi?)*/
 .navbarcolor{
     background-color: #303536;
 }
