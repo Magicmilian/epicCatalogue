@@ -32,6 +32,23 @@ body{
   width: 100%;
 }
 
+/* Error404 */
+#parrafoError{
+  font-size: 25px;
+}
+/* MEDIA QUERIES ERROR404 */
+/* extra small device */
+@media all and (max-width: 600px){
+  #col1:img{
+   width: 70px;
+  }
+  .col2{
+    width: 70px;
+  }
+  .col3{
+    width: 70px;
+  }
+
 /* FONDO DE PANTALLA */
 .fondoPantalla{
   background-color: #292929;

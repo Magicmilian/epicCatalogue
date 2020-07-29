@@ -38,6 +38,11 @@ body{
   width: 100%;
 }
 
+/* Error404 */
+#parrafoError{
+  font-size: 25px;
+}
+
 /* FONDO DE PANTALLA */
 .fondoPantalla{
   background-color: #292929;

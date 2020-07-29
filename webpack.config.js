@@ -121,7 +121,7 @@ module.exports = {
         useShortDoctype: true
       },
       inject: true,
-      chunks: ["general"],
+      chunks: ["error404"],
       filename: "./error404.html"
     }),
     new MiniCssExtractPlugin({
