@@ -59,7 +59,7 @@ function categArcade() {
                 <img src="img/${productoLS[i].imagen1}" class="card-img-top" alt="${productoLS[i].nombre}" style="width:100%">
                 <div class="card-body">
                     <a class="text-light" href="#" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}">
-                        <h5 class="card-title">${productoLS[i].nombre}</h5>
+                        <h5 class="card-title nombreIndex">${productoLS[i].nombre}</h5>
                     </a>
                 </div>
             </div>
@@ -80,7 +80,7 @@ function categAccion() {
                 <img src="img/${productoLS[i].imagen1}" class="card-img-top" alt="${productoLS[i].nombre}" style="width:100%">
                 <div class="card-body">
                     <a class="text-light" href="#" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}">
-                        <h5 class="card-title">${productoLS[i].nombre}</h5>
+                        <h5 class="card-title nombreIndex">${productoLS[i].nombre}</h5>
                     </a>
                 </div>
             </div>
@@ -101,7 +101,7 @@ function categSimulacion() {
                 <img src="img/${productoLS[i].imagen1}" class="card-img-top" alt="${productoLS[i].nombre}" style="width:100%">
                 <div class="card-body">
                     <a class="text-light" href="#" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}">
-                        <h5 class="card-title">${productoLS[i].nombre}</h5>
+                        <h5 class="card-title nombreIndex">${productoLS[i].nombre}</h5>
                     </a>
                 </div>
             </div>
@@ -114,13 +114,13 @@ function categSimulacion() {
 categProximamente();
 function categProximamente() {
     let productoLS = JSON.parse(localStorage.getItem("productoKey"));
-    let proximamenteJS = document.getElementsByClassName("PROXIMAMENTE");
+    let proximamenteJS = document.getElementById("categoriaProximamente");
     for (let i in productoLS) {
         if (productoLS[i].publicado == true && productoLS[i].categoria == "Proximamente") {
             let htmlCateg = `   <div class="col-md-6">
             <img src="img/${productoLS[i].imagen2}" class="img-fluid d-block w-100 mt-3" alt="${productoLS[i].nombre}">
             <a class="text-light" href="#" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}">
-                <h5 class="card-title mt-2">${productoLS[i].nombre}</h5>
+                <h5 class="card-title nombreIndex mt-2">${productoLS[i].nombre}</h5>
             </a>
         </div>`
             proximamenteJS.innerHTML += htmlCateg;

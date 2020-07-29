@@ -14,6 +14,14 @@ background-image: linear-gradient(90deg, #085eea 36%, #2AF598 100%);
 #categoria{
   background-color: #131313;
 }
+.proximamente{
+  background-color: #131313;
+}
+.nombreIndex{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .card{
   background-color:#131313;
   border-radius: 0%;
