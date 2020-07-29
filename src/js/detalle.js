@@ -45,7 +45,7 @@ function detallesJuego(codigo){
             <!--Detalles-->
             <h1 class="text-light">${juegoFiltrado[0].nombre}</h1>
             <h3 class="text-light">${juegoFiltrado[0].categoria}</h3>
-            <p class="descripcionDetalles">${juegoFiltrado[0].descripcion}</p>
+            <p class="descripcionDetalles">${juegoFiltrado[0].descripcionLarga}</p>
         </div>
     </div>`;
         sectionDetalles.innerHTML += detallesHTML;
@@ -54,7 +54,7 @@ function detallesJuego(codigo){
         let detallesHTML = ` <div class="my-4">
         <h1 class="text-light">${juegoFiltrado[0].nombre}</h1>
         <h3 class="text-light">${juegoFiltrado[0].categoria}</h3>
-        <p>${juegoFiltrado[0].descripcion}</p>
+        <p>${juegoFiltrado[0].descripcionLarga}</p>
     </div>`;
     sectionDetalles.innerHTML += detallesHTML;
     }

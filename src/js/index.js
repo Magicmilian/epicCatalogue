@@ -37,9 +37,10 @@ function destacar() {
     </div>
     <div class="col-lg-4 my-auto">
         <h1 class="display-5 text-light mt-2 w-100">${productoLS[i].nombre}</h1>
-        <p class="lead w-100">${productoLS[i].descripcion}</p>
+        <p class="lead mb-1 w-100 descripcionIndex">${productoLS[i].descripcion}</p>
         <p>Categoria: ${productoLS[i].categoria}</p>
-        <a class="btn btn-primary btn-md mx-4 mb-4 lead" href="#" role="button" id="${productoLS[i].codigo}>VER MAS</a>
+        <a class="btn btn-primary btn-md mb-2 lead" href="#" role="button" id="${productoLS[i].codigo}">VER MAS</a>
+
     </div>
 </div>`
         }
@@ -57,7 +58,7 @@ function categArcade() {
             <div class="card" style="width:100%">
                 <img src="img/${productoLS[i].imagen1}" class="card-img-top" alt="${productoLS[i].nombre}" style="width:100%">
                 <div class="card-body">
-                    <a class="text-light" href="#" id="${productoLS[i].codigo}>
+                    <a class="text-light" href="#" id="${productoLS[i].codigo}">
                         <h5 class="card-title">${productoLS[i].nombre}</h5>
                     </a>
                 </div>
@@ -78,7 +79,7 @@ function categAccion() {
             <div class="card" style="width:100%">
                 <img src="img/${productoLS[i].imagen1}" class="card-img-top" alt="${productoLS[i].nombre}" style="width:100%">
                 <div class="card-body">
-                    <a class="text-light" href="#" id="${productoLS[i].codigo}>
+                    <a class="text-light" href="#" id="${productoLS[i].codigo}">
                         <h5 class="card-title">${productoLS[i].nombre}</h5>
                     </a>
                 </div>
@@ -99,7 +100,7 @@ function categSimulacion() {
             <div class="card" style="width:100%">
                 <img src="img/${productoLS[i].imagen1}" class="card-img-top" alt="${productoLS[i].nombre}" style="width:100%">
                 <div class="card-body">
-                    <a class="text-light" href="#" id="${productoLS[i].codigo}>
+                    <a class="text-light" href="#" id="${productoLS[i].codigo}">
                         <h5 class="card-title">${productoLS[i].nombre}</h5>
                     </a>
                 </div>
@@ -118,7 +119,7 @@ function categProximamente() {
         if (productoLS[i].publicado == true && productoLS[i].categoria == "Proximamente") {
             let htmlCateg = `   <div class="col-md-6">
             <img src="img/${productoLS[i].imagen2}" class="img-fluid d-block w-100 mt-3" alt="${productoLS[i].nombre}">
-            <a class="text-light" href="#" id="${productoLS[i].codigo}>
+            <a class="text-light" href="#" id="${productoLS[i].codigo}">
                 <h5 class="card-title mt-2">${productoLS[i].nombre}</h5>
             </a>
         </div>`

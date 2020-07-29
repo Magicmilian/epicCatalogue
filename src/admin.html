@@ -103,20 +103,25 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="">Categoria</label>
-                            <input id="categoria" type="text" onblur="campoRequerido(this)" placeholder="Ej: Aventura"
-                                class="form-control">
+                            <label for="categoriaForm">Categoria</label>
+                            <select id="categoriaForm" size="1" class="custom-select" onblur="campoRequerido(this)" name="Categorias">
+                                    <option value="" selected></option>
+                                    <option value="Arcade, supervivencia y aventuras">Arcade, supervivencia y aventuras</option>
+                                    <option value="Acción, supervivencia y guerra">Acción, supervivencia y guerra</option>
+                                    <option value="Simulación">Simulación</option>
+                                  </select>
                             <div class="valid-feedback">
                             </div>
                             <div class="invalid-feedback">
-                                Debe completar el campo con una categoria.
+                                Debe seleccionar una categoria.
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="">Descripcion</label>
-                            <input id="descripcion" type="text" onblur="campoRequerido(this)"
+                            <label id="labelDescripcion" for="">Descripcion breve (165 caracteres max.)</label>
+                            <p id="charNum" class="d-none text-info"></p>
+                            <textarea rows="3" id="descripcion" type="text" onkeyup="countChars(this)" onblur="descripcionBreve(this)"
                                 placeholder="Ej: Descubre junto a Aloy los misterios de su existencia..."
-                                class="form-control">
+                                class="form-control"></textarea>
                             <div class="valid-feedback">
                             </div>
                             <div class="invalid-feedback">
@@ -124,7 +129,18 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="">Imagen 1</label>
+                            <label for="">Descripcion completa</label>
+                            <textarea rows="3" id="descripcionLarga" type="text" onblur="campoRequerido(this)"
+                                placeholder="Ej: Descubre junto a Aloy los misterios de su existencia..."
+                                class="form-control"></textarea>
+                            <div class="valid-feedback">
+                            </div>
+                            <div class="invalid-feedback">
+                                Debe completar el campo con una descripcion del juego.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Imagen Portada</label>
                             <input id="imagen1" type="text" onblur="campoRequerido(this)"
                                 placeholder="Ej: horizon_zero.png" class="form-control">
                             <div class="valid-feedback">
@@ -134,7 +150,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="">Imagen 2</label>
+                            <label for="">Imagen Slider Portada</label>
                             <input id="imagen2" type="text" onblur="campoRequerido(this)"
                                 placeholder="Ej: horizon_zero2.png" class="form-control">
                             <div class="valid-feedback">
@@ -144,7 +160,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="">Imagen 3</label>
+                            <label for="">Imagen Slider Juego</label>
                             <input id="imagen3" type="text" onblur="campoRequerido(this)"
                                 placeholder="Ej: horizon_zero3.png" class="form-control">
                             <div class="valid-feedback">

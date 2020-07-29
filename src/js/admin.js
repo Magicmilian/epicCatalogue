@@ -175,8 +175,9 @@ function borrarFilas() {
 window.limpiarForm = function () {
     let codigo = document.getElementById("codigo");
     let nombre = document.getElementById("nombre");
-    let categoria = document.getElementById("categoria");
+    let categoria = document.getElementById("categoriaForm");
     let descripcion = document.getElementById("descripcion");
+    let descripcionLarga = document.getElementById("descripcionLarga");
     let imagen1 = document.getElementById("imagen1");
     let imagen2 = document.getElementById("imagen2");
     let imagen3 = document.getElementById("imagen3");
@@ -188,6 +189,7 @@ window.limpiarForm = function () {
     nombre.className = "form-control";
     categoria.className = "form-control";
     descripcion.className = "form-control";
+    descripcionLarga.className = "form-control";
     imagen1.className = "form-control";
     imagen2.className = "form-control";
     imagen3.className = "form-control";
@@ -210,17 +212,18 @@ function agregarProducto() {
     //Traigo los valores del formulario y los defino como variables
     let codigo = document.getElementById("codigo");
     let nombre = document.getElementById("nombre");
-    let categoria = document.getElementById("categoria");
+    let categoria = document.getElementById("categoriaForm");
     let descripcion = document.getElementById("descripcion");
+    let descripcionLarga = document.getElementById("descripcionLarga");
     let imagen1 = document.getElementById("imagen1");
     let imagen2 = document.getElementById("imagen2");
     let imagen3 = document.getElementById("imagen3");
     let iframeurl = document.getElementById("iframeurl");
 
     //Valido el formulario de manera general
-    if (validarCodigo(codigo) && campoRequerido(nombre) && campoRequerido(categoria) && campoRequerido(descripcion) && campoRequerido(imagen1) && campoRequerido(imagen2) && campoRequerido(imagen3) && validarUrl(iframeurl)) {
+    if (validarCodigo(codigo) && campoRequerido(nombre) && campoRequerido(categoria) && descripcionBreve(descripcion) && campoRequerido(descripcionLarga) && campoRequerido(imagen1) && campoRequerido(imagen2) && campoRequerido(imagen3) && validarUrl(iframeurl)) {
         //Creamos un objeto nuevo con los valores que trajimos de los inputs del formulario
-        let producto = new Producto(codigo.value, nombre.value, categoria.value, descripcion.value, imagen1.value, imagen2.value, imagen3.value, iframeurl.value);
+        let producto = new Producto(codigo.value, nombre.value, categoria.value, descripcion.value, descripcionLarga.value, imagen1.value, imagen2.value, imagen3.value, iframeurl.value);
         listaProductos.push(producto);
         localStorage.setItem("productoKey", JSON.stringify(listaProductos));
         leerDatos();
@@ -231,7 +234,8 @@ function agregarProducto() {
         validarCodigo(codigo);
         campoRequerido(nombre);
         campoRequerido(categoria);
-        campoRequerido(descripcion);
+        descripcionBreve(descripcion);
+        campoRequerido(descripcionLarga);
         campoRequerido(imagen1);
         campoRequerido(imagen2);
         campoRequerido(imagen3);
@@ -250,8 +254,9 @@ window.abrirModificarProducto = function (codigo) {
     document.getElementById("codigo").value = objetoEncontrado.codigo;
     document.getElementById("codigo").setAttribute("disabled", "");
     document.getElementById("nombre").value = objetoEncontrado.nombre;
-    document.getElementById("categoria").value = objetoEncontrado.categoria;
+    document.getElementById("categoriaForm").value = objetoEncontrado.categoria;
     document.getElementById("descripcion").value = objetoEncontrado.descripcion;
+    document.getElementById("descripcionLarga").value = objetoEncontrado.descripcionLarga;
     document.getElementById("imagen1").value = objetoEncontrado.imagen1;
     document.getElementById("imagen2").value = objetoEncontrado.imagen2;
     document.getElementById("imagen3").value = objetoEncontrado.imagen3;
@@ -267,20 +272,22 @@ window.guardarProductoModificado = function () {
     //Traigo los valores del formulario y los defino como variables
     let codigo = document.getElementById("codigo");
     let nombre = document.getElementById("nombre");
-    let categoria = document.getElementById("categoria");
+    let categoria = document.getElementById("categoriaForm");
     let descripcion = document.getElementById("descripcion");
+    let descripcionLarga = document.getElementById("descripcionLarga");
     let imagen1 = document.getElementById("imagen1");
     let imagen2 = document.getElementById("imagen2");
     let imagen3 = document.getElementById("imagen3");
     let iframeurl = document.getElementById("iframeurl");
     //Valido el formulario de manera general
-    if (campoRequerido(nombre) && campoRequerido(categoria) && campoRequerido(descripcion) && campoRequerido(imagen1) && campoRequerido(imagen2) && campoRequerido(imagen3) && validarUrl(iframeurl)) {
+    if (campoRequerido(nombre) && campoRequerido(categoria) && descripcionBreve(descripcion) && campoRequerido(descripcionLarga) && campoRequerido(imagen1) && campoRequerido(imagen2) && campoRequerido(imagen3) && validarUrl(iframeurl)) {
         //Buscar el producto que estaba modificando en el arreglo y actualizar los valores
         for (let i in listaProductos) {
             if (listaProductos[i].codigo == codigo.value) {
                 listaProductos[i].nombre = nombre.value;
                 listaProductos[i].categoria = categoria.value;
                 listaProductos[i].descripcion = descripcion.value;
+                listaProductos[i].descripcionLarga = descripcionLarga.value;
                 listaProductos[i].imagen1 = imagen1.value;
                 listaProductos[i].imagen2 = imagen2.value;
                 listaProductos[i].imagen3 = imagen3.value;
@@ -296,7 +303,8 @@ window.guardarProductoModificado = function () {
     } else {
         campoRequerido(nombre);
         campoRequerido(categoria);
-        campoRequerido(descripcion);
+        descripcionBreve(descripcion);
+        campoRequerido(descripcionLarga);
         campoRequerido(imagen1);
         campoRequerido(imagen2);
         campoRequerido(imagen3);
@@ -394,6 +402,28 @@ window.validarCodigo = function (codigo) {
         codigo.className = "form-control is-invalid";
         return false;
     }
+}
+
+window.descripcionBreve = function(input){
+    console.log(input.value.length)
+    if (input.value != "" && input.value.length <= 165) {
+        input.className = "form-control is-valid";
+        return true;
+    } else {
+        input.className = "form-control is-invalid";
+        return false;
+    }  
+}
+
+window.countChars =function (obj){
+    if(obj.value.length == 0){
+        document.getElementById("charNum").className = "d-none"
+    }else{
+        document.getElementById("charNum").innerHTML = obj.value.length+' caracteres';
+        document.getElementById("charNum").className = "text-info mb-0"
+        document.getElementById("labelDescripcion").className = "mb-0"
+    }
+
 }
 
 window.campoRequerido = function (input) {
