@@ -36,11 +36,9 @@ function destacar() {
         </section>
     </div>
     <div class="col-lg-4 my-auto">
-        <h1 class="display-5 text-light mt-2 w-100">${productoLS[i].nombre}</h1>
+        <a role="button" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}"><h1 class="display-5 text-light mt-2 w-100">${productoLS[i].nombre}</h1></a>
         <p class="lead mb-1 w-100 descripcionIndex">${productoLS[i].descripcion}</p>
         <p>Categoria: ${productoLS[i].categoria}</p>
-        <a class="btn btn-primary btn-md mb-2 lead" href="#" role="button" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}">VER MAS</a>
-
     </div>
 </div>`
         }
