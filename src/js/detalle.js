@@ -35,12 +35,12 @@ function detallesJuego(codigo){
         //Si el campo no esta vacio, dibujamos la seccion con el iframe
         let detallesHTML = `<div class="row">
         <!--iframe-Juego Detalles-->
-        <div class="col-12 col-lg-8 mt-4 p-4 text-center iframeDisplay">
+        <div class="col-12 mt-4 p-2 text-center iframeDisplay">
             <iframe class="" width="100%" height="" src="${juegoFiltrado[0].iframeurl}"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
-        <div class="col-12 col-lg-4 p-4 mt-4">
+        <div class="col-12 p-1 mt-1">
             <!--Detalles-->
             <h1 class="text-light">${juegoFiltrado[0].nombre}</h1>
             <h3 class="text-light">${juegoFiltrado[0].categoria}</h3>
