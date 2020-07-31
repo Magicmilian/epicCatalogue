@@ -12,14 +12,14 @@ function destacar() {
 
             document.getElementById("destacado").innerHTML = `<div class="row">
     <div class="col-lg-8 p-0">
-        <section class="carrusel">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/${productoLS[i].imagen2}" class="d-block w-100" alt="${productoLS[i].nombre}">
+        <section class="carrusel h-100">
+            <div id="carouselExampleIndicators" class="carousel slide h-100" data-ride="carousel">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                        <img src="img/${productoLS[i].imagen2}" class="d-block h-100 w-100" alt="${productoLS[i].nombre}">
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/${productoLS[i].imagen3}" class="d-block w-100" alt="${productoLS[i].nombre}">
+                    <div class="carousel-item h-100">
+                        <img src="img/${productoLS[i].imagen3}" class="d-block h-100 w-100" alt="${productoLS[i].nombre}">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
@@ -36,11 +36,9 @@ function destacar() {
         </section>
     </div>
     <div class="col-lg-4 my-auto">
-        <h1 class="display-5 text-light mt-2 w-100">${productoLS[i].nombre}</h1>
+        <a role="button" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}"><h1 class="display-5 text-light mt-2 w-100">${productoLS[i].nombre}</h1></a>
         <p class="lead mb-1 w-100 descripcionIndex">${productoLS[i].descripcion}</p>
         <p>Categoria: ${productoLS[i].categoria}</p>
-        <a class="btn btn-primary btn-md mb-2 lead" href="#" role="button" onclick="abrirDetalles(this.id)" id="${productoLS[i].codigo}">VER MAS</a>
-
     </div>
 </div>`
         }
