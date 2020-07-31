@@ -53,6 +53,7 @@ background-image: linear-gradient(90deg, #085eea 36%, #2AF598 100%);
 
 .navtext a:hover{
     color: #007DFC;
+    background-color: #303536;
 }
 
 .lead-active{
@@ -167,24 +168,28 @@ select{
 
 /*OVERFLOW CAMPO DESCRIPCION*/
 .tablaDescripcion{
-  max-width: 300px;
+  max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .tablaNombre{
-  max-width: 300px;
+  max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .tablaCategoria{
-  max-width: 200px;
+  max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.tablaCodigo{
+  min-width: 95px;
 }
 
 /*TABLA RESPONSIVE Y SCROLL BAR HORIZONTAL*/
@@ -318,13 +323,9 @@ text-decoration: none;
         width: 50px;
         margin-left: 10px;
       }
-
-      .sliderDestacado{
-        object-fit: cover;
-      }
       
       .sliderImg img{
-        object-fit: cover;
+        object-fit: fill;
         height: 200px;
       }
 
@@ -380,13 +381,11 @@ text-decoration: none;
         margin-left: 10px;
       }
 
-      .sliderDestacado{
-        object-fit: cover;
-      }
+
       
       .sliderImg img{
-        object-fit: cover;
-        height: 200px;
+        object-fit: fill;
+        height: 250px;
       }
 
       .iframeDisplay iframe{
@@ -435,13 +434,11 @@ text-decoration: none;
         margin-left: 10px;
       }
 
-      .sliderDestacado{
-        object-fit: cover;
-      }
+
       
       .sliderImg img{
-        object-fit: cover;
-        height: 300px;
+        object-fit: fill;
+        height: 350px;
       }
 
       .iframeDisplay iframe{
@@ -496,13 +493,11 @@ text-decoration: none;
             margin-left: 10px;
           }
         
-          .sliderDestacado{
-            object-fit: cover;
-          }
+
           
         .sliderImg img{
-            object-fit: cover;
-            height: 400px;
+            object-fit: fill;
+            height: 450px;
           }
 
         .iframeDisplay iframe{
@@ -565,13 +560,11 @@ text-decoration: none;
             margin-left: 10px;
           }
 
-          .sliderDestacado{
-            object-fit: cover;
-          }
+  
           
         .sliderImg img{
-            object-fit: cover;
-            height: 400px;
+            object-fit: fill;
+            height: 650px;
           }
         
         .iframeDisplay iframe{

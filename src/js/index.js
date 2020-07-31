@@ -12,14 +12,14 @@ function destacar() {
 
             document.getElementById("destacado").innerHTML = `<div class="row">
     <div class="col-lg-8 p-0">
-        <section class="carrusel">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/${productoLS[i].imagen2}" class="d-block w-100" alt="${productoLS[i].nombre}">
+        <section class="carrusel h-100">
+            <div id="carouselExampleIndicators" class="carousel slide h-100" data-ride="carousel">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                        <img src="img/${productoLS[i].imagen2}" class="d-block h-100 w-100" alt="${productoLS[i].nombre}">
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/${productoLS[i].imagen3}" class="d-block w-100" alt="${productoLS[i].nombre}">
+                    <div class="carousel-item h-100">
+                        <img src="img/${productoLS[i].imagen3}" class="d-block h-100 w-100" alt="${productoLS[i].nombre}">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
