@@ -2,6 +2,7 @@ import "@fortawesome/fontawesome-free/js/all.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap";
 import "../css/style.css";
+import Swal from "sweetalert2";
 
 window.requiereNombre = function (input) {
     if (input.value != "") {
@@ -76,7 +77,9 @@ window.formularioRegistro = function (e) {
         requiereNumero(document.getElementById('telefonoRegistro'))&&
         requiereCondiciones(document.getElementById('checkboxRegistro'))
     ) {
-        console.log("desde la funcion validar general");
+        console.log("Registro ok.");
+        enviarEmail();
+
     }else{
         requiereNombre(document.getElementById('nombreRegistro'));
         requiereApellido(document.getElementById('apellidoRegistro'));
@@ -84,6 +87,47 @@ window.formularioRegistro = function (e) {
         requierePass(document.getElementById('passRegistro'));
         requiereNumero(document.getElementById('telefonoRegistro'));
         requiereCondiciones(document.getElementById('checkboxRegistro'));
-        alert("Debes completar todos los campos requeridos antes de poder registrarte!");
+        Swal.fire(
+            "¡Datos incompletos!",
+            "Debe completar todos los datos para poder continuar.",
+            "warning"
+          )
     }
+}
+
+function enviarEmail(){
+let template_params = {
+    to_name: "Administrador",
+    from_name: document.getElementById('apellidoRegistro').value,
+    message_html: `Datos para registrar:<br>
+                    Nombre: ${document.getElementById('nombreRegistro').value} ${document.getElementById('apellidoRegistro').value}<br>
+                    Email: ${document.getElementById('mailRegistro').value}<br>
+                    Contraseña: ${document.getElementById('passRegistro').value}<br>
+                    Telefono: ${document.getElementById('telefonoRegistro').value}`
+  };
+
+  let service_id = "default_service";
+  let template_id = "template_vNQrBfhj";
+  emailjs.send(service_id, template_id, template_params).then(
+    function (response) {
+      console.log(response);
+      Swal.fire(
+        "¡Correcto!",
+        "Los datos fueron enviados a un administrador que se pondra en contacto para continuar con el registro.",
+        "success"
+      ).then(function () {
+        location.reload();
+      });
+    },
+    function (error) {
+      console.log(error)
+      Swal.fire(
+        "Ocurrio un error...",
+        "Por favor, reintente mas tarde..",
+        "error"
+      ).then(function () {
+        location.reload();
+      });
+    }
+  );
 }
