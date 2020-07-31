@@ -1,56 +1,39 @@
 /*NAVBAR Y GENERALES*/
-body{
-  font-family: 'Alegreya Sans SC', sans-serif;
+body {
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 
-#destacado{
+#destacado {
   background-color: #131313;
 }
 
-.navbarcolor{
-    background-color: #303536;
+.navbarcolor {
+  background-color: #303536;
 }
 
-.navtext a,p{
-    color: #ffffff;
+.navtext a,
+p {
+  color: #ffffff;
 }
 
-.navtext a:hover{
-    color: #007DFC;
+.navtext a:hover {
+  color: #007dfc;
 }
 
-.lead-active{
-    text-decoration: underline;
+.lead-active {
+  text-decoration: underline;
 }
 
-.custom-toggler.navbar-toggler { 
-    border: 2px solid  #ffffff;
-  } 
+.custom-toggler.navbar-toggler {
+  border: 2px solid #ffffff;
+}
 
-
-.footer-custom{
+.footer-custom {
   width: 100%;
 }
 
-/* Error404 */
-#parrafoError{
-  font-size: 25px;
-}
-/* MEDIA QUERIES ERROR404 */
-/* extra small device */
-@media all and (max-width: 600px){
-  #col1:img{
-   width: 70px;
-  }
-  .col2{
-    width: 70px;
-  }
-  .col3{
-    width: 70px;
-  }
-
 /* FONDO DE PANTALLA */
-.fondoPantalla{
+.fondoPantalla {
   background-color: #292929;
 }
 
@@ -60,12 +43,12 @@ body{
   min-height: 55vh !important;
 }
 
-.tableCustom{
+.tableCustom {
   color: white;
   font-size: 18px;
 }
 
-th{
+th {
   background-color: #080808;
 }
 
@@ -73,26 +56,26 @@ tr:nth-child(even) {
   background-color: #303536;
 }
 
-.sorter{
+.sorter {
   cursor: pointer;
 }
 
 /*OVERFLOW CAMPO DESCRIPCION*/
-.tablaDescripcion{
+.tablaDescripcion {
   max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.tablaNombre{
+.tablaNombre {
   max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.tablaCategoria{
+.tablaCategoria {
   max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
@@ -100,7 +83,7 @@ tr:nth-child(even) {
 }
 
 /*TABLA RESPONSIVE Y SCROLL BAR HORIZONTAL*/
-.table-responsive-custom{
+.table-responsive-custom {
   display: block;
   width: 100%;
   overflow-x: auto;
@@ -115,11 +98,11 @@ tr:nth-child(even) {
 }
 
 .table-responsive-custom::-webkit-scrollbar-thumb {
-  background-color: #007DFC;
+  background-color: #007dfc;
 }
 
-.table-responsive-custom::-webkit-scrollbar-track { 
-  background-color: #ffffff; 
+.table-responsive-custom::-webkit-scrollbar-track {
+  background-color: #ffffff;
 }
 
 /*CONFIGURACION DE CHECKBOX*/
@@ -160,7 +143,7 @@ tr:nth-child(even) {
 
 /* When the checkbox is checked, add a blue background */
 .checkContainer input:checked ~ .checkmark {
-  background-color: #007DFC;
+  background-color: #007dfc;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -190,174 +173,80 @@ tr:nth-child(even) {
 }
 
 /*CONFIGURACION DE OPCIONES*/
-.btnSizeCustom{
-  width: 36.25px ;
+.btnSizeCustom {
+  width: 36.25px;
   height: 33px;
 }
 
-.opciones{
+.opciones {
   min-width: 150px;
 }
 /*MEDIA QUERIES*/
 
 /*X-SMALL DEVICES PUBLICIDAD*/
-@media all and (max-width:576px){
-    .logohead{
-        width: 50px;
-        margin-left: 10px;
-      }
-
-      .header-margin{
-        margin-bottom: 82.88px;
-      }
-    }
-  
-  /*SMALL DEVICES*/
-  @media all and (min-width:576px) and (max-width:768px){
-    .logohead{
-        width: 70px;
-        margin-left: 10px;
-      }
-
-      .header-margin{
-        margin-bottom: 105.63px;
-      }
-    }
-  
-  /*MEDIUM DEVICES*/
-  @media all and (min-width: 768px) and (max-width:991px){
-    .logohead{
-        width: 70px;
-        margin-left: 10px;
-      }
-
-      .header-margin{
-        margin-bottom: 105.63px;
-      }
-    }
-  
-  /*LARGE DEVICES*/
-    @media all and (min-width: 991px) and (max-width:1200px){
-        .logohead{
-            width: 70px;
-            margin-left: 10px;
-          }
-
-        .header-margin{
-            margin-bottom: 105.63px;
-          }
-    }
-  
-  /*XTRA LARGE DEVICES*/
-    @media all and (min-width: 1200px){
-        .logohead{
-            width: 70px;
-            margin-left: 10px;
-          }
-
-        .header-margin{
-            margin-bottom: 105.63px;
-          }
-    } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media all and (max-width: 576px) {
+  .logohead {
+    width: 50px;
+    margin-left: 10px;
+  }
+
+  .header-margin {
+    margin-bottom: 82.88px;
+  }
+}
+
+/*SMALL DEVICES*/
+@media all and (min-width: 576px) and (max-width: 768px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
+
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
+
+/*MEDIUM DEVICES*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
+
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
+
+/*LARGE DEVICES*/
+@media all and (min-width: 991px) and (max-width: 1200px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
+
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
+
+/*XTRA LARGE DEVICES*/
+@media all and (min-width: 1200px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
+
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
+
+/* error 404 */
+#parrafoError{
+  font-size: 30px;
+}
+#imgfornaite{
+  width: 100%;
+}
