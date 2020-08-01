@@ -4,29 +4,87 @@ import "bootstrap";
 import "../css/style.css";
 import Swal from "sweetalert2";
 
-window.login = function (event) {
-  event.preventDefault();
-  let user = document.getElementById("user").value;
-  let password = document.getElementById("password").value;
-  // Usuarios: (Para agregar uno nuevo se puede agregar un nuevo if manteniendo el contenido del centro.)
-  if (user == "ADMIN" && password == "ADMIN") {
-    console.log("Login Correcto.");
-    location.href = "admin.html";
-  }
-  if (user == "ROLLING" && password == "CODE2020") {
-    console.log("Login Correcto.");
-    location.href = "admin.html";
-  }
-  //Modifica pagina en caso de usuario incorrecto:
-  else {
-    let invalidUser = document.getElementById("user");
-    let invalidPassword = document.getElementById("password");
-    let invalidImagen1 = document.getElementById("imgLogin1");
-    let invalidImagen2 = document.getElementById("imgLogin2");
+let invalidUser = document.getElementById("user");
+let invalidPassword = document.getElementById("password");
+let invalidImagen1 = document.getElementById("imgLogin1");
+let invalidImagen2 = document.getElementById("imgLogin2");
+
+
+
+window.validarUser = function (){
+  let user = document.getElementById("user").value.toUpperCase();
+  if (user == ""){
     invalidUser.className = "form-control is-invalid";
+    invalidImagen1.className = "fondoLogin1-invalid";
+    invalidImagen2.className = "fondoLogin2-invalid";
+    document.getElementById('feedbackUser').innerText = "Debe ingresar un usuario."
+    return false;
+  }
+  else{
+    invalidUser.className = "form-control";
+    invalidImagen1.className = "fondoLogin1";
+    invalidImagen2.className = "fondoLogin2";
+    return true;
+  }
+} 
+
+window.validarPassword = function (){
+  let password = document.getElementById("password").value.toUpperCase();
+  if (password == ""){
     invalidPassword.className = "form-control is-invalid";
     invalidImagen1.className = "fondoLogin1-invalid";
     invalidImagen2.className = "fondoLogin2-invalid";
+    document.getElementById('feedbackPassword').innerText = "Debe ingresar una contraseña."
+    return false;
+  }
+  else if(password.length < 8){
+    invalidPassword.className = "form-control is-invalid";
+    invalidImagen1.className = "fondoLogin1-invalid";
+    invalidImagen2.className = "fondoLogin2-invalid";
+    document.getElementById('feedbackPassword').innerText = "La contraseña debe tener mas de 8 caracteres."
+    return false;
+  }
+  else{
+    invalidPassword.className = "form-control";
+    invalidImagen1.className = "fondoLogin1";
+    invalidImagen2.className = "fondoLogin2";
+    return true;
+  }
+} 
+
+window.login = function (event) {
+  event.preventDefault();
+  let user = document.getElementById("user").value.toUpperCase();
+  let password = document.getElementById("password").value.toUpperCase();
+  validarPassword();
+  validarUser();
+  // Usuarios: (Para agregar uno nuevo se puede agregar un nuevo "else if" manteniendo el contenido del centro.)
+  if (user == "ADMIN" && password == "ADMINISTRADOR") {
+    console.log("Login Correcto.");
+    location.href = "admin.html";
+    localStorage.setItem("userKey", JSON.stringify("admin"));
+  }
+  else if (user == "OTROUSUARIO" && password == "12345678") {
+    console.log("Login Correcto.");
+    location.href = "admin.html";
+    localStorage.setItem("userKey", JSON.stringify("admin"));
+  }
+  //Modifica pagina en caso de usuario incorrecto:
+  else {
+    if(validarPassword() == true && validarUser() == true){
+      // Alert
+      Swal.fire(
+        "¡Inicio de Sesion Incorrecto!",
+        "El usuario ingresado o la contraseña son incorrectos.",
+        "warning"
+      );
+      invalidImagen1.className = "fondoLogin1-invalid";
+      invalidImagen2.className = "fondoLogin2-invalid";
+      document.getElementById('feedbackPassword').innerText = "Verificar contraseña.";
+      invalidPassword.className = "form-control is-invalid";
+      document.getElementById('feedbackUser').innerText = "Verificar usuario.";
+      invalidUser.className = "form-control is-invalid";
+    }
   }
 };
 

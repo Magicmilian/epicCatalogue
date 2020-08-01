@@ -64,15 +64,14 @@
                     <div class="form-group mt-2">
                         <label  class="text-light"><p class="d-inline labelForm">Usuario</p> </label>
                         <input type="text" class="form-control" id="user" aria-describedby="emailHelp"
-                            placeholder="usuario">
-                        <div class="invalid-feedback">Verifique que el usuario ingresado sea correcto.
-                        </div>
+                            placeholder="usuario" onblur="validarUser()">
+                        <div class="invalid-feedback" id="feedbackUser"></div>
                     </div>
                     <!-- contraseña -->
                     <div class="form-group">
                         <label  class="text-light"><p class="d-inline labelForm">Contraseña</p></label>
-                        <input type="password" class="form-control" id="password" placeholder="***********">
-                        <div class="invalid-feedback">Verifique que la contraseña ingresada sea correcta.</div>
+                        <input type="password" class="form-control" id="password" placeholder="********" onblur="validarPassword()">
+                        <div class="invalid-feedback" id="feedbackPassword"></div>
 
                     </div>
                     <!-- boton iniciar -->
