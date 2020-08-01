@@ -1,106 +1,130 @@
 /*NAVBAR*/
 
-body{
-  font-family: 'Red Rose', cursive;;
+body {
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
 
-.navbarcolor{
-    background-color: #303536;
+.navbarcolor {
+  background-color: #303536;
 }
 
-.navtext a,p{
-    color: #ffffff;
+.navtext a,
+p {
+  color: #ffffff;
 }
 
-.navtext a:hover{
-    color: #007DFC;
+.navtext a:hover {
+  color: #007dfc;
 }
 
-.lead-active{
-    font-weight: 500;
+.lead-active {
+  font-weight: 500;
 }
 
-.custom-toggler.navbar-toggler { 
-    border: 2px solid  #ffffff;
-  } 
+.custom-toggler.navbar-toggler {
+  border: 2px solid #ffffff;
+}
 
-
-.footer-custom{
+.footer-custom {
   width: 100%;
 }
 
 /* FONDO DE PANTALLA */
-.fondoPantalla{
+.fondoPantalla {
   background-color: #292929;
 }
-.fondoNegroOscuro{
+.fondoNegroOscuro {
   background-color: #080808;
 }
-.pentagono { 
-  width: 54px; 
+.pentagono {
+  width: 54px;
   position: relative;
-  border-width: 50px 18px 0; 
-  border-style: solid; 
+  border-width: 50px 18px 0;
+  border-style: solid;
   border-color: #34495e transparent;
 }
 /*MEDIA QUERIES*/
 
 /*X-SMALL DEVICES PUBLICIDAD*/
-@media all and (max-width:576px){
-    .logohead{
-        width: 50px;
-        margin-left: 10px;
-      }
+@media all and (max-width: 576px) {
+  .logohead {
+    width: 50px;
+    margin-left: 10px;
+  }
 
-      .header-margin{
-        margin-bottom: 82.88px;
-      }
-    }
-  
-  /*SMALL DEVICES*/
-  @media all and (min-width:576px) and (max-width:768px){
-    .logohead{
-        width: 70px;
-        margin-left: 10px;
-      }
+  .header-margin {
+    margin-bottom: 82.88px;
+  }
+}
 
-      .header-margin{
-        margin-bottom: 105.63px;
-      }
-    }
-  
-  /*MEDIUM DEVICES*/
-  @media all and (min-width: 768px) and (max-width:991px){
-    .logohead{
-        width: 70px;
-        margin-left: 10px;
-      }
+/*SMALL DEVICES*/
+@media all and (min-width: 576px) and (max-width: 768px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
 
-      .header-margin{
-        margin-bottom: 105.63px;
-      }
-    }
-  
-  /*LARGE DEVICES*/
-    @media all and (min-width: 991px) and (max-width:1200px){
-        .logohead{
-            width: 70px;
-            margin-left: 10px;
-          }
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
 
-        .header-margin{
-            margin-bottom: 105.63px;
-          }
-    }
-  
-  /*XTRA LARGE DEVICES*/
-    @media all and (min-width: 1200px){
-        .logohead{
-            width: 70px;
-            margin-left: 10px;
-          }
+/*MEDIUM DEVICES*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
 
-        .header-margin{
-            margin-bottom: 105.63px;
-          }
-    } 
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
+
+/*LARGE DEVICES*/
+@media all and (min-width: 991px) and (max-width: 1200px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
+
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
+
+/*XTRA LARGE DEVICES*/
+@media all and (min-width: 1200px) {
+  .logohead {
+    width: 70px;
+    margin-left: 10px;
+  }
+
+  .header-margin {
+    margin-bottom: 105.63px;
+  }
+}
+
+#headerAcercaDe {
+  height: 280px;
+  text-align: center;
+  position: relative;
+}
+
+.imgHeaderAcercaDe{
+  position: absolute;
+  z-index: -1;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.personaAcercade{
+  border-radius: 50%;
+  max-height: 220px;
+  max-width: 220px;
+  width: 220px;
+  height: 220px;
+}
+
