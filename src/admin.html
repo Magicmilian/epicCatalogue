@@ -37,12 +37,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Inicio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="acerca_de.html">Acerca de</a>
-              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -59,14 +53,37 @@
                   class="dropdown-menu navbarcolor navtext"
                   aria-labelledby="navbarDropdown"
                 >
-                  <a class="dropdown-item" href="registro.html">Registro</a>
-                  <a class="dropdown-item" href="login.html">Login</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="index.html">Cerrar Sesion</a>
+                  <a
+                    class="dropdown-item"
+                    href="registro.html"
+                    id="registroNavbar"
+                    >Registro</a
+                  >
+                  <div class="dropdown-divider" id="dividerNav"></div>
+                  <a class="dropdown-item" href="login.html" id="loginNavbar"
+                    >Login</a
+                  >
+                  <a
+                    class="dropdown-item d-none"
+                    href="index.html"
+                    onclick="cerrarSesion()"
+                    id="cerrarsesionNavbar"
+                    >Cerrar Sesion</a
+                  >
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link lead-active" href="admin.html"
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="acerca_de.html">Acerca de</a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link lead-active"
+                  href="admin.html"
+                  id="adminNavbar"
                   >Administracion</a
                 >
               </li>
