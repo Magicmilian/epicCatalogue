@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <header class="">
+    <header>
       <nav class="navbar navbar-expand-lg navbarcolor navtext">
         <div class="container">
           <a class="navbar-brand" href="index.html"
@@ -37,17 +37,54 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Inicio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Cuenta
+                </a>
+                <div
+                  class="dropdown-menu navbarcolor navtext"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a
+                    class="dropdown-item"
+                    href="registro.html"
+                    id="registroNavbar"
+                    >Registro</a
+                  >
+                  <div class="dropdown-divider" id="dividerNav"></div>
+                  <a class="dropdown-item" href="login.html" id="loginNavbar"
+                    >Login</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="index.html"
+                    onclick="cerrarSesion()"
+                    id="cerrarsesionNavbar"
+                    >Cerrar Sesion</a
+                  >
+                </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="acerca_de.html">Acerca de</a>
-              </li>
-              <li class="nav-item lead-active">
-                <a class="nav-link" href="registro.html">Registro</a>
+                <a class="nav-link" href="contacto.html"
+                  >Contacto</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="admin.html">Administracion</a>
+                <a class="nav-link lead-active" href="acerca_de.html">Acerca de</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link d-none" href="admin.html" id="adminNavbar"
+                  >Administracion</a
+                >
               </li>
             </ul>
           </div>
@@ -87,9 +124,9 @@
         <!--Acordeon acerca de-->
         <div class="accordion my-3" id="sliderEntradaIntegrantes">
           <div class="card border-dark">
-            <div class="card-header" id="entradaIntegrantes">
+            <div class="card-header " id="entradaIntegrantes">
               <button
-                class="btn btn-block collapsed"
+                class="btn btn-block collapsed card-header-acercade"
                 type="button"
                 data-toggle="collapse"
                 data-target="#collapseEntradaIntegrantes"
@@ -222,7 +259,9 @@
                       />
                     </div>
 
-                    <div class="text-light text-left col-12 col-sm-12 col-md-12 col-lg-8">
+                    <div
+                      class="text-light text-left col-12 col-sm-12 col-md-12 col-lg-8"
+                    >
                       <h4 class="mt-3 mb-1">Juan D'amichici</h4>
                       <p class="lead">
                         Mecanico automotriz, estudiante de full stack en rolling

@@ -619,3 +619,9 @@ select {
   width: 220px;
   height: 220px;
 }
+
+.card-header-acercade{
+  color: white;
+  background-color: #085eea;
+  border: 0px
+}
