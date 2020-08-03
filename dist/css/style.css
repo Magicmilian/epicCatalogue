@@ -151,6 +151,10 @@ p {
   min-height: 55vh !important;
 }
 
+.min-vh-60{
+  min-height: 60vh;
+}
+
 .tableCustom {
   color: white;
   font-size: 18px;
@@ -340,8 +344,7 @@ select {
 /*X-SMALL DEVICES PUBLICIDAD*/
 @media all and (max-width: 576px) {
   .logohead {
-    width: 50px;
-    margin-left: 10px;
+    width: 120px;
   }
 
   .sliderImg img {
@@ -396,8 +399,7 @@ select {
 /*SMALL DEVICES*/
 @media all and (min-width: 576px) and (max-width: 768px) {
   .logohead {
-    width: 70px;
-    margin-left: 10px;
+    width: 120px;
   }
 
   .sliderImg img {
@@ -447,8 +449,7 @@ select {
 /*MEDIUM DEVICES*/
 @media all and (min-width: 768px) and (max-width: 991px) {
   .logohead {
-    width: 70px;
-    margin-left: 10px;
+    width: 120px;
   }
 
   .sliderImg img {
@@ -501,8 +502,7 @@ select {
 /*LARGE DEVICES*/
 @media all and (min-width: 991px) and (max-width: 1200px) {
   .logohead {
-    width: 70px;
-    margin-left: 10px;
+    width: 120px;
   }
 
   .sliderImg img {
@@ -565,8 +565,7 @@ select {
 /*XTRA LARGE DEVICES*/
 @media all and (min-width: 1200px) {
   .logohead {
-    width: 70px;
-    margin-left: 10px;
+    width: 120px;
   }
 
   .sliderImg img {
@@ -591,9 +590,13 @@ select {
 }
 
 /*CONFIGURACION DE PAGINA ERROR 404*/
+#wrapper{
+  position: relative;
+}
+
 #containerImgError {
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -607,6 +610,16 @@ select {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#containerErrorPadre{
+position: relative;
+height: 150px;
+}
+
+#containerImgErrorPadre{
+  position: relative;
+  bottom: 0px;
 }
 
 #headerAcercaDe {
