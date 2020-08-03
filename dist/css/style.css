@@ -582,6 +582,12 @@ select {
   .descripcionDetalles {
     font-size: 20px;
   }
+
+  .navtext a,
+  p {
+    color: #ffffff;
+    font-size: 18px;
+  }
 }
 
 /*CONFIGURACION DE PAGINA ERROR 404*/
@@ -611,7 +617,7 @@ select {
 
 .imgHeaderAcercaDe {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   left: 0px;
   width: 100%;
   height: 100%;
@@ -626,9 +632,14 @@ select {
   height: 220px;
 }
 
-.card-header-acercade{
+.card-header-acercade {
   color: white;
   background-color: #085eea;
-  border: 0px
+  border: 0px;
+}
+
+.logoAcercaDe {
+  z-index: 1;
+  position: relative;
 }
 
